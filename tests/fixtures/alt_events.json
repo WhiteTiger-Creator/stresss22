@@ -1,0 +1,98 @@
+[
+  {
+    "object_id": "cx-01",
+    "accessed_ms": 15180000000000,
+    "severity": "critical",
+    "bucket": "prod-backups",
+    "detector": "malicious object injection",
+    "dismissed": false
+  },
+  {
+    "object_id": "cx-02",
+    "accessed_ms": 15180000000350,
+    "severity": "high",
+    "bucket": "prod-backups",
+    "detector": "access key hijack",
+    "dismissed": false
+  },
+  {
+    "object_id": "cx-03",
+    "accessed_ms": 15180000001600,
+    "severity": "high",
+    "bucket": "customer-pii",
+    "detector": "presigned url replay storm",
+    "dismissed": false
+  },
+  {
+    "object_id": "cx-04",
+    "accessed_ms": 15180000002100,
+    "severity": "critical",
+    "bucket": "billing-exports",
+    "detector": "malicious object injection",
+    "dismissed": false
+  },
+  {
+    "object_id": "cx-05",
+    "accessed_ms": 15180000002500,
+    "severity": "high",
+    "bucket": "analytics-raw",
+    "detector": "malicious object injection",
+    "dismissed": false
+  },
+  {
+    "object_id": "cx-06",
+    "accessed_ms": 15180000003100,
+    "severity": "critical",
+    "bucket": "audit-archive",
+    "detector": "replication drift anomaly",
+    "dismissed": false
+  },
+  {
+    "object_id": "cx-07",
+    "accessed_ms": 15180000003700,
+    "severity": "high",
+    "bucket": "vendor-shared",
+    "detector": "credential in object metadata",
+    "dismissed": false
+  },
+  {
+    "object_id": "cx-08",
+    "accessed_ms": 15180000004100,
+    "severity": "medium",
+    "bucket": "prod-backups",
+    "detector": "privileged policy grant",
+    "dismissed": false
+  },
+  {
+    "object_id": "cx-09",
+    "accessed_ms": 15180000004300,
+    "severity": "low",
+    "bucket": "customer-pii",
+    "detector": "stale token reuse",
+    "dismissed": false
+  },
+  {
+    "object_id": "cx-10",
+    "accessed_ms": 15180000004700,
+    "severity": "high",
+    "bucket": "billing-exports",
+    "detector": "policy violation flood",
+    "dismissed": true
+  },
+  {
+    "object_id": "cx-11",
+    "accessed_ms": 15180000005100,
+    "severity": "high",
+    "bucket": "audit-archive",
+    "detector": "access log tampering burst",
+    "dismissed": false
+  },
+  {
+    "object_id": "cx-12",
+    "accessed_ms": 15180000005400,
+    "severity": "high",
+    "bucket": "prod-backups",
+    "detector": "lifecycle policy tampering",
+    "dismissed": false
+  }
+]

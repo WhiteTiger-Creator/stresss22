@@ -1,0 +1,74 @@
+[
+  {
+    "bucket": "vendor-shared",
+    "severity_scope": "all",
+    "start_ms": 15180000007150,
+    "end_ms": 15180000007400
+  },
+  {
+    "bucket": "prod-backups",
+    "severity_scope": "critical",
+    "start_ms": 15180000008750,
+    "end_ms": 15180000008850
+  },
+  {
+    "bucket": "analytics-raw",
+    "severity_scope": "high",
+    "start_ms": 15180000008450,
+    "end_ms": 15180000008480
+  },
+  {
+    "bucket": "billing-exports",
+    "severity_scope": "high",
+    "start_ms": 15180000001000,
+    "end_ms": 15180000001200
+  },
+  {
+    "bucket": "prod-backups",
+    "severity_scope": "all",
+    "start_ms": 15180000000200,
+    "end_ms": 15180000000300
+  },
+  {
+    "bucket": "prod-backups",
+    "severity_scope": "all",
+    "start_ms": 15180000000300,
+    "end_ms": 15180000000360
+  },
+  {
+    "bucket": "customer-pii",
+    "severity_scope": "all",
+    "start_ms": 15180000001800,
+    "end_ms": 15180000001847
+  },
+  {
+    "bucket": "audit-archive",
+    "severity_scope": "all",
+    "start_ms": 15180000003700,
+    "end_ms": 15180000003761
+  },
+  {
+    "bucket": "customer-pii",
+    "severity_scope": "all",
+    "start_ms": 15180000008000,
+    "end_ms": 15180000008071
+  },
+  {
+    "bucket": "analytics-raw",
+    "severity_scope": "all",
+    "start_ms": 15180000008300,
+    "end_ms": 15180000008391
+  },
+  {
+    "bucket": "billing-exports",
+    "severity_scope": "all",
+    "start_ms": 15180000009000,
+    "end_ms": 15180000009047
+  },
+  {
+    "bucket": "customer-pii",
+    "severity_scope": "all",
+    "start_ms": 15180000010000,
+    "end_ms": 15180000010061
+  }
+]
