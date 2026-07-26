@@ -1,5 +1,5 @@
-# Bucketwatch Signal Incident Dossier
-Corvus Security Operations - signal console archive (2026-Q1 through 2026-Q2).
+# Bucketwatch Object-Routing Review Dossier
+Corvus Storage Operations — object-routing review archive (2026-Q1 through 2026-Q2).
 
 ## Executive Summary
 Attestation rollup export has been unstable since early 2026. Early triage blamed dashboard cache lag and suggested CSV fallback — those notes are archived below and may contradict later findings. For acceptance behavior, cross-check analyst notes embedded in console-window objects against bundled events.json — early triage sections above are not authoritative.

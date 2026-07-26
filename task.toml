@@ -4,12 +4,12 @@ version = "2.0"
 author_name = "anonymous"
 author_email = "anonymous"
 difficulty = "hard"
-category = "security"
+category = "system-administration"
 subcategories = ["long_context"]
 number_of_milestones = 0
 codebase_size = "minimal"
 languages = ["python"]
-tags = ["security", "incident-response", "cli", "python", "data-processing"]
+tags = ["system-administration", "operations", "cli", "python", "reconciliation"]
 expert_time_estimate_min = 180
 junior_time_estimate_min = 360
 

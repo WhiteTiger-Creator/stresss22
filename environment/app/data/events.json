@@ -4,7 +4,7 @@
     "accessed_ms": 15180000000000,
     "severity": "critical",
     "bucket": "prod-backups",
-    "detector": "malicious object injection",
+    "detector": "unexpected object write",
     "dismissed": false
   },
   {
@@ -12,7 +12,7 @@
     "accessed_ms": 15180000000250,
     "severity": "Critical",
     "bucket": "prod-backups",
-    "detector": "access key hijack",
+    "detector": "access key rotation lag",
     "dismissed": false
   },
   {
@@ -20,7 +20,7 @@
     "accessed_ms": 15180000000800,
     "severity": "high",
     "bucket": "prod-backups",
-    "detector": "lifecycle policy tampering",
+    "detector": "lifecycle policy drift",
     "dismissed": false
   },
   {
@@ -28,7 +28,7 @@
     "accessed_ms": 15180000001100,
     "severity": "HIGH ",
     "bucket": "billing-exports",
-    "detector": "policy violation flood",
+    "detector": "policy mismatch flood",
     "dismissed": false
   },
   {
@@ -36,7 +36,7 @@
     "accessed_ms": 15180000001500,
     "severity": "high",
     "bucket": "billing-exports",
-    "detector": "presigned url replay storm",
+    "detector": "presigned url reuse spike",
     "dismissed": false
   },
   {
@@ -44,7 +44,7 @@
     "accessed_ms": 15180000002000,
     "severity": "high",
     "bucket": "customer-pii",
-    "detector": "mass object download abuse",
+    "detector": "mass object download spike",
     "dismissed": false
   },
   {
@@ -52,7 +52,7 @@
     "accessed_ms": 15180000003000,
     "severity": "high",
     "bucket": "prod-backups",
-    "detector": "signed url forgery exploit",
+    "detector": "signed url mismatch",
     "dismissed": false
   },
   {
@@ -60,7 +60,7 @@
     "accessed_ms": 15180000003150,
     "severity": "critical",
     "bucket": "prod-backups",
-    "detector": "stored credential theft",
+    "detector": "stored object staleness",
     "dismissed": false
   },
   {
@@ -68,7 +68,7 @@
     "accessed_ms": 15180000003400,
     "severity": "critical",
     "bucket": "analytics-raw",
-    "detector": "malicious object injection",
+    "detector": "unexpected object write",
     "dismissed": false
   },
   {
@@ -76,7 +76,7 @@
     "accessed_ms": 15180000003700,
     "severity": "critical",
     "bucket": "vendor-shared",
-    "detector": "malicious object injection",
+    "detector": "unexpected object write",
     "dismissed": false
   },
   {
@@ -84,7 +84,7 @@
     "accessed_ms": 15180000003900,
     "severity": "high",
     "bucket": "audit-archive",
-    "detector": "access log tampering burst",
+    "detector": "access log write burst",
     "dismissed": false
   },
   {
@@ -92,7 +92,7 @@
     "accessed_ms": 15180000005200,
     "severity": "high",
     "bucket": "prod-backups",
-    "detector": "public acl grant",
+    "detector": "public acl drift",
     "dismissed": false
   },
   {
@@ -100,7 +100,7 @@
     "accessed_ms": 15180000005400,
     "severity": "medium",
     "bucket": "billing-exports",
-    "detector": "unfamiliar s3 client",
+    "detector": "unrecognized s3 client",
     "dismissed": false
   },
   {
@@ -108,7 +108,7 @@
     "accessed_ms": 15180000005500,
     "severity": "low",
     "bucket": "customer-pii",
-    "detector": "stale token reuse",
+    "detector": "stale session reuse",
     "dismissed": false
   },
   {
@@ -116,7 +116,7 @@
     "accessed_ms": 15180000005600,
     "severity": "medium",
     "bucket": "audit-archive",
-    "detector": "download from tor exit",
+    "detector": "download from remote region",
     "dismissed": false
   },
   {
@@ -124,7 +124,7 @@
     "accessed_ms": 15180000006200,
     "severity": "high",
     "bucket": "prod-backups",
-    "detector": "malicious object injection",
+    "detector": "unexpected object write",
     "dismissed": true
   },
   {
@@ -132,7 +132,7 @@
     "accessed_ms": 15180000006300,
     "severity": "critical",
     "bucket": "billing-exports",
-    "detector": "policy violation flood",
+    "detector": "policy mismatch flood",
     "dismissed": "yes"
   },
   {
@@ -140,7 +140,7 @@
     "accessed_ms": 15180000007200,
     "severity": "high",
     "bucket": "vendor-shared",
-    "detector": "presigned url replay storm",
+    "detector": "presigned url reuse spike",
     "dismissed": false
   },
   {
@@ -148,7 +148,7 @@
     "accessed_ms": 15180000007350,
     "severity": "critical",
     "bucket": "vendor-shared",
-    "detector": "presigned url replay storm",
+    "detector": "presigned url reuse spike",
     "dismissed": false
   },
   {
@@ -156,7 +156,7 @@
     "accessed_ms": 15180000008200,
     "severity": "high",
     "bucket": "customer-pii",
-    "detector": "malicious object injection",
+    "detector": "unexpected object write",
     "dismissed": false
   },
   {
@@ -164,7 +164,7 @@
     "accessed_ms": 15180000008500,
     "severity": "high",
     "bucket": "analytics-raw",
-    "detector": "brute force list lockout",
+    "detector": "list request throttle",
     "dismissed": false
   },
   {
@@ -172,7 +172,7 @@
     "accessed_ms": 15180000008800,
     "severity": "critical",
     "bucket": "prod-backups",
-    "detector": "privileged policy grant",
+    "detector": "broad policy grant",
     "dismissed": false
   },
   {
@@ -180,7 +180,7 @@
     "accessed_ms": 15180000009200,
     "severity": "high",
     "bucket": "billing-exports",
-    "detector": "exfil via multipart copy",
+    "detector": "slow multipart copy",
     "dismissed": false
   },
   {
@@ -188,7 +188,7 @@
     "accessed_ms": 15180000009400,
     "severity": "critical",
     "bucket": "audit-archive",
-    "detector": "replication drift anomaly",
+    "detector": "replication lag drift",
     "dismissed": false
   },
   {
@@ -196,7 +196,7 @@
     "accessed_ms": 15180000010200,
     "severity": "high",
     "bucket": "customer-pii",
-    "detector": "credential in object metadata",
+    "detector": "oversized object metadata",
     "dismissed": false
   },
   {
@@ -204,7 +204,7 @@
     "accessed_ms": 15180000010290,
     "severity": "high",
     "bucket": "customer-pii",
-    "detector": "signing key exposure",
+    "detector": "signing key rotation due",
     "dismissed": false
   },
   {
@@ -212,7 +212,7 @@
     "accessed_ms": 15180000000120,
     "severity": "high",
     "bucket": "prod-backups",
-    "detector": "malicious object injection",
+    "detector": "unexpected object write",
     "dismissed": false
   },
   {
@@ -220,7 +220,7 @@
     "accessed_ms": 15180000003900,
     "severity": "critical",
     "bucket": "audit-archive",
-    "detector": "access log tampering burst",
+    "detector": "access log write burst",
     "dismissed": false
   }
 ]
