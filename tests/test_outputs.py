@@ -379,12 +379,16 @@ def _annotate_chain_influence(rows):
             break
         influence = updated
         rounds += 1
+    ranked = sorted(set(influence.values()), reverse=True)
+    rank_of = {value: index + 1 for index, value in enumerate(ranked)}
     for row in rows:
         chain_id = row["chain_id"]
         score = influence[chain_id]
+        rank = rank_of[score]
         row["chain_influence_score"] = score
         row["chain_influence_rounds"] = rounds
-        row["chain_influence_digest"] = hashlib.sha256(f"{chain_id}|{score}|{rounds}".encode()).hexdigest()[:12]
+        row["chain_influence_rank"] = rank
+        row["chain_influence_digest"] = hashlib.sha256(f"{chain_id}|{score}|{rounds}|{rank}".encode()).hexdigest()[:12]
 
 
 def _compute_summary(events: list[dict], override_rows: list[dict] | None = None) -> dict:
@@ -1549,3 +1553,20 @@ def test_chain_influence_reported_from_synchronous_fixed_point(summary: dict):
         "|".join(row["chain_influence_digest"] for row in signals).encode("utf-8")
     ).hexdigest()
 
+
+def test_chain_influence_rank_is_global_dense_rank():
+    """chain_influence_rank is the DENSE rank of chain_influence_score in DESCENDING order
+    taken GLOBALLY across all chains (#OBJ-5402): ties share a rank, ranks are 1..N with no
+    gaps, and every row of a given score carries the same rank. A per-chain or per-component
+    ranking that ignores the global score set fails this and the chain-influence digest."""
+    events = json.loads(INPUT_PATH.read_text())
+    signals = _compute_escalated(events)
+    assert signals, "no escalated rows to exercise the global rank"
+    by_score: dict[int, set[int]] = {}
+    for row in signals:
+        by_score.setdefault(row["chain_influence_score"], set()).add(row["chain_influence_rank"])
+    assert all(len(ranks) == 1 for ranks in by_score.values()), "rank is not a function of the global score"
+    ordered = sorted(by_score, reverse=True)
+    assert [next(iter(by_score[s])) for s in ordered] == list(range(1, len(ordered) + 1)), (
+        "chain_influence_rank must be the dense descending rank over the whole chain set"
+    )

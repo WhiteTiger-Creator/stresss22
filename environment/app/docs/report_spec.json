@@ -438,6 +438,7 @@
         "chain_reach_digest",
         "chain_influence_score",
         "chain_influence_rounds",
+        "chain_influence_rank",
         "chain_influence_digest",
         "signal_digest"
       ],
@@ -478,7 +479,7 @@
     "chain_digest": "first 12 lowercase SHA256 hex chars of chain_id|chain_size|chain_span_ms|chain_risk_score|comma_joined_chain_object_ids",
     "chain_id": "first 10 lowercase SHA1 hex chars of comma_joined_chain_object_ids",
     "chain_reach_digest": "first 12 lowercase SHA256 hex chars of chain_id|chain_reach_score|chain_reach_depth|comma_joined_chain_reach_path",
-    "chain_influence_digest": "first 12 lowercase SHA256 hex chars of chain_id|chain_influence_score|chain_influence_rounds (the #OBJ-5398 synchronous chain-influence fixed point governs the score)",
+    "chain_influence_digest": "first 12 lowercase SHA256 hex chars of chain_id|chain_influence_score|chain_influence_rounds|chain_influence_rank (the #OBJ-5398 synchronous chain-influence fixed point governs the score and rounds; chain_influence_rank is the #OBJ-5402 global dense rank of the score)",
     "chain_digest_checksum": "SHA-256 over the per-signal-row chain_digest values in escalated.jsonl export order, joined by a single '|' with no trailing separator",
     "chain_reach_digest_checksum": "SHA-256 over the per-signal-row chain_reach_digest values in export order, joined by a single '|' with no trailing separator",
     "chain_influence_digest_checksum": "SHA-256 over the per-signal-row chain_influence_digest values in export order, joined by a single '|' with no trailing separator",
