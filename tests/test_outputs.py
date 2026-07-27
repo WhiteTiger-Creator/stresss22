@@ -338,6 +338,55 @@ def _annotate_chain_reach(rows: list[dict]) -> None:
             rows[index]["chain_reach_digest"] = chain["reach_digest"]
 
 
+def _annotate_chain_influence(rows):
+    chains = {}
+    for row in rows:
+        chain = chains.setdefault(
+            row["chain_id"],
+            {"start_ms": row["accessed_ms"], "end_ms": row["accessed_ms"], "assets": set(), "tokens": set(), "risk": row["chain_risk_score"]},
+        )
+        chain["start_ms"] = min(chain["start_ms"], row["accessed_ms"])
+        chain["end_ms"] = max(chain["end_ms"], row["accessed_ms"])
+        chain["assets"].add(row["bucket"])
+        chain["tokens"].update(str(row["detector"]).lower().split())
+    order = sorted(chains)
+    neighbors = {chain_id: [] for chain_id in order}
+    for left_pos in range(len(order)):
+        for right_pos in range(left_pos + 1, len(order)):
+            left = chains[order[left_pos]]
+            right = chains[order[right_pos]]
+            gap_ms = max(0, max(left["start_ms"], right["start_ms"]) - min(left["end_ms"], right["end_ms"]))
+            if gap_ms > 2500:
+                continue
+            shared_assets = len(left["assets"] & right["assets"])
+            shared_tokens = len(left["tokens"] & right["tokens"])
+            if shared_assets == 0 and shared_tokens == 0:
+                continue
+            weight = 2 + shared_assets + (2 * shared_tokens)
+            neighbors[order[left_pos]].append((order[right_pos], weight))
+            neighbors[order[right_pos]].append((order[left_pos], weight))
+    influence = {chain_id: chains[chain_id]["risk"] for chain_id in order}
+    rounds = 0
+    while True:
+        updated = {}
+        for chain_id in order:
+            best = 0
+            for neighbor_id, weight in neighbors[chain_id]:
+                candidate = influence[neighbor_id] + weight
+                best = max(best, candidate)
+            updated[chain_id] = chains[chain_id]["risk"] + (best // 3)
+        if updated == influence:
+            break
+        influence = updated
+        rounds += 1
+    for row in rows:
+        chain_id = row["chain_id"]
+        score = influence[chain_id]
+        row["chain_influence_score"] = score
+        row["chain_influence_rounds"] = rounds
+        row["chain_influence_digest"] = hashlib.sha256(f"{chain_id}|{score}|{rounds}".encode()).hexdigest()[:12]
+
+
 def _compute_summary(events: list[dict], override_rows: list[dict] | None = None) -> dict:
     canonical = _canonicalize_events(events)
     severity_counts = {severity: 0 for severity in SEVERITY_ORDER}
@@ -403,6 +452,13 @@ def _compute_summary(events: list[dict], override_rows: list[dict] | None = None
                 row["chain_reach_digest"] for row in signals
             ).encode("utf-8")
         ).hexdigest(),
+        "max_chain_influence_score": max(
+            (row["chain_influence_score"] for row in signals),
+            default=0,
+        ),
+        "chain_influence_digest_checksum": hashlib.sha256(
+            "|".join(row["chain_influence_digest"] for row in signals).encode("utf-8")
+        ).hexdigest(),
         "signal_digest_checksum": hashlib.sha256(
             "|".join(row["signal_digest"] for row in signals).encode("utf-8")
         ).hexdigest(),
@@ -428,7 +484,7 @@ def _escalation_ledger(signals: list[dict]) -> dict:
             else max(previous_accessed_ms - signal["accessed_ms"], 0)
         )
         carry_in = max(previous_carry_out - (gap_ms // 150), 0)
-        pressure = signal["chain_risk_score"] + (-(-carry_in // 3))
+        pressure = signal["chain_risk_score"] + (-(-carry_in // 3)) + (signal["chain_influence_score"] // 6)
         carry_out = min(
             carry_in + signal["chain_risk_score"] - (signal["chain_size"] // 2), 58
         )
@@ -498,6 +554,7 @@ def _compute_escalated(events: list[dict], override_rows: list[dict] | None = No
         )
     _annotate_chains(rows)
     _annotate_chain_reach(rows)
+    _annotate_chain_influence(rows)
     for row in rows:
         row["signal_digest"] = hashlib.sha1(
             (
@@ -721,6 +778,8 @@ def test_verified_summary_matches_independent_computation(diagnosis: dict, expec
         "chain_digest_checksum",
         "max_chain_reach_score",
         "chain_reach_digest_checksum",
+        "max_chain_influence_score",
+        "chain_influence_digest_checksum",
         "signal_digest_checksum",
         "critical_escalation_ids",
         "critical_escalation_count",
@@ -1359,7 +1418,7 @@ def test_escalation_ledger_credit_is_ceilinged(summary: dict):
     for signal in signals:
         gap = 0 if prev_ms is None else max(prev_ms - signal["accessed_ms"], 0)
         carry_in = max(prev_out - (gap // 150), 0)
-        pressure = signal["chain_risk_score"] + (carry_in // 3)
+        pressure = signal["chain_risk_score"] + (carry_in // 3) + (signal["chain_influence_score"] // 6)
         carry_out = min(carry_in + signal["chain_risk_score"] - (signal["chain_size"] // 2), 58)
         rows.append(f"{signal['object_id']}|{pressure}|{1 if pressure >= 20 else 0}|{carry_out}")
         prev_ms, prev_out = signal["accessed_ms"], carry_out
@@ -1475,3 +1534,18 @@ def test_logrotate_dropin_installed():
     for directive in ("daily", "rotate 14", "compress", "missingok", "notifempty",
                       "su svc-objship svc-objship", "create 0640 svc-objship svc-objship"):
         assert directive in text, f"logrotate drop-in missing required directive: {directive}"
+
+
+def test_chain_influence_reported_from_synchronous_fixed_point(summary: dict):
+    """max_chain_influence_score and chain_influence_digest_checksum come from the
+    synchronous (Jacobi) chain-influence fixed point (#OBJ-5398); a Gauss-Seidel or
+    non-converged variant produces a different per-row digest and so a different checksum."""
+    events = json.loads(INPUT_PATH.read_text())
+    signals = _compute_escalated(events)
+    assert summary["max_chain_influence_score"] == max(
+        (row["chain_influence_score"] for row in signals), default=0
+    )
+    assert summary["chain_influence_digest_checksum"] == hashlib.sha256(
+        "|".join(row["chain_influence_digest"] for row in signals).encode("utf-8")
+    ).hexdigest()
+
