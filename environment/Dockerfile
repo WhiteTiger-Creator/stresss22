@@ -6,6 +6,8 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         tmux \
         asciinema \
+        cron \
+        logrotate \
     && rm -rf /var/lib/apt/lists/*
 
 # Hash-locked verifier dependencies: --require-hashes verifies each downloaded
