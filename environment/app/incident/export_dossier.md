@@ -503,3 +503,1771 @@ scheduled compile can run unattended under its own account. The repair brings th
 the governed behaviour so that when it runs, its output is trustworthy. Neither substitutes for the
 other: a correct pipeline scheduled on a broken host never runs, and a correctly scheduled host
 running a broken pipeline ships a bad queue. Acceptance checks both independently.
+
+
+---
+
+# Operational appendix — bucket, detector and review corpus
+
+Extended operational context: how the governed behaviour plays out against real access patterns. Not a contract — where any statement here disagrees with a dated decision, the decision governs; every value is derived at compile time from the inputs and the report spec.
+
+
+### Bucket profile — alpha (north lane)
+
+The alpha bucket runs about 900 monitored accesses per console day and runs quiet for long stretches punctuated by enumeration spikes. carries a heavy authenticated baseline that rarely clusters Its overrides were reversed on a later shift after suppressing a genuine escalation. It chains readily with delta whenever their accesses fall inside the coupling gap. Its ledger carry held too long across a quiet gap, exposing the decay-rounding bug. Its influence rank sits mid-table; it couples but never dominates. No alpha-specific rule overrides the governed behaviour; this profile explains alpha's chain and pressure shapes. Migration chatter is provenance only.
+
+### Bucket profile — beta (south lane)
+
+The beta bucket runs about 1111 monitored accesses per console day and sits near its access ceiling most days without breaching SLO. spikes hard during south maintenance windows and is otherwise unremarkable Its dismissal windows abut without overlapping, so compaction leaves them nearly untouched. Its chains dissolve quickly once gap decay eats the carried pressure. A stale-cache dashboard lag was misattributed to it before being ruled downstream. Its chains are short and shallow, rarely reaching past one predecessor. No beta-specific rule overrides the governed behaviour; this profile explains beta's chain and pressure shapes. Migration chatter is provenance only.
+
+### Bucket profile — gamma (east lane)
+
+The gamma bucket runs about 1322 monitored accesses per console day and runs quiet for long stretches punctuated by enumeration spikes. carries a heavy authenticated baseline that rarely clusters Its overrides expire fast, so most accesses see no suppression at all. Shared detector tokens, not a shared bucket, drive most of its links to xi. Its duplicate rows tied to the final tie-break key, a useful determinism test. Its influence converges in a single round because its coupling is sparse. No gamma-specific rule overrides the governed behaviour; this profile explains gamma's chain and pressure shapes. Migration chatter is provenance only.
+
+### Bucket profile — delta (west lane)
+
+The delta bucket runs about 1533 monitored accesses per console day and sits near its access ceiling most days without breaching SLO. spikes hard during west maintenance windows and is otherwise unremarkable The override history here is unusually churny and stresses compaction well. It almost never unions with other buckets; its chains are single-bucket. A multipart-abort storm briefly doubled its volume with no genuine escalations. It formed the longest observed chain during the west incident, later trimmed by reach. No delta-specific rule overrides the governed behaviour; this profile explains delta's chain and pressure shapes. Migration chatter is provenance only.
+
+### Bucket profile — epsilon (central lane)
+
+The epsilon bucket runs about 1744 monitored accesses per console day and runs quiet for long stretches punctuated by enumeration spikes. carries a heavy authenticated baseline that rarely clusters Two overlapping override windows here motivated the compaction checksum. It is a frequent reach predecessor for omega but rarely a successor. An escalator inflated severity on its duplicates, driving the tie-break reversal. It anchors long reach paths during central bursts because its spikes align in time. No epsilon-specific rule overrides the governed behaviour; this profile explains epsilon's chain and pressure shapes. Migration chatter is provenance only.
+
+### Bucket profile — zeta (coastal lane)
+
+The zeta bucket runs about 1955 monitored accesses per console day and sits near its access ceiling most days without breaching SLO. spikes hard during coastal maintenance windows and is otherwise unremarkable Its override windows were widened after a quiet-hour false-positive wave and never narrowed. Its influence rank sits mid-table; it couples but never dominates. A page here traced to benign automation sharing tokens with a real signal. It chains readily with epsilon whenever their accesses fall inside the coupling gap. No zeta-specific rule overrides the governed behaviour; this profile explains zeta's chain and pressure shapes. Migration chatter is provenance only.
+
+### Bucket profile — eta (inland lane)
+
+The eta bucket runs about 2166 monitored accesses per console day and runs quiet for long stretches punctuated by enumeration spikes. carries a heavy authenticated baseline that rarely clusters Its per-severity and all-scope windows were confused before the scopes were pinned. Its chains are short and shallow, rarely reaching past one predecessor. Nothing notable; it has been a calm lane across the review window. Its chains dissolve quickly once gap decay eats the carried pressure. No eta-specific rule overrides the governed behaviour; this profile explains eta's chain and pressure shapes. Migration chatter is provenance only.
+
+### Bucket profile — theta (offshore lane)
+
+The theta bucket runs about 2377 monitored accesses per console day and sits near its access ceiling most days without breaching SLO. spikes hard during offshore maintenance windows and is otherwise unremarkable It carries no standing overrides; every suppression is decided per incident. Its influence converges in a single round because its coupling is sparse. A wide override here suppressed a risk-level row and was rolled back next shift. Shared detector tokens, not a shared bucket, drive most of its links to omicron. No theta-specific rule overrides the governed behaviour; this profile explains theta's chain and pressure shapes. Migration chatter is provenance only.
+
+### Bucket profile — iota (metro lane)
+
+The iota bucket runs about 2588 monitored accesses per console day and runs quiet for long stretches punctuated by enumeration spikes. carries a heavy authenticated baseline that rarely clusters Analysts narrowed its override scope to per-severity once wide scope hid real rows. It formed the longest observed chain during the metro incident, later trimmed by reach. A casing-drift bug split its severities into phantom classes until normalization caught it. It almost never unions with other buckets; its chains are single-bucket. No iota-specific rule overrides the governed behaviour; this profile explains iota's chain and pressure shapes. Migration chatter is provenance only.
+
+### Bucket profile — kappa (ridge lane)
+
+The kappa bucket runs about 2799 monitored accesses per console day and sits near its access ceiling most days without breaching SLO. spikes hard during ridge maintenance windows and is otherwise unremarkable A single long override here dominates its compaction interval set. It anchors long reach paths during ridge bursts because its spikes align in time. A region-hop burst here was the first case that exercised the wide probe boundary. It is a frequent reach predecessor for alpha but rarely a successor. No kappa-specific rule overrides the governed behaviour; this profile explains kappa's chain and pressure shapes. Migration chatter is provenance only.
+
+### Bucket profile — lambda (harbor lane)
+
+The lambda bucket runs about 3010 monitored accesses per console day and runs quiet for long stretches punctuated by enumeration spikes. carries a heavy authenticated baseline that rarely clusters Its overrides were reversed on a later shift after suppressing a genuine escalation. It chains readily with zeta whenever their accesses fall inside the coupling gap. Its ledger carry held too long across a quiet gap, exposing the decay-rounding bug. Its influence rank sits mid-table; it couples but never dominates. No lambda-specific rule overrides the governed behaviour; this profile explains lambda's chain and pressure shapes. Migration chatter is provenance only.
+
+### Bucket profile — mu (summit lane)
+
+The mu bucket runs about 3221 monitored accesses per console day and sits near its access ceiling most days without breaching SLO. spikes hard during summit maintenance windows and is otherwise unremarkable Its dismissal windows abut without overlapping, so compaction leaves them nearly untouched. Its chains dissolve quickly once gap decay eats the carried pressure. A stale-cache dashboard lag was misattributed to it before being ruled downstream. Its chains are short and shallow, rarely reaching past one predecessor. No mu-specific rule overrides the governed behaviour; this profile explains mu's chain and pressure shapes. Migration chatter is provenance only.
+
+### Bucket profile — nu (north lane)
+
+The nu bucket runs about 3432 monitored accesses per console day and runs quiet for long stretches punctuated by enumeration spikes. carries a heavy authenticated baseline that rarely clusters Its overrides expire fast, so most accesses see no suppression at all. Shared detector tokens, not a shared bucket, drive most of its links to pi. Its duplicate rows tied to the final tie-break key, a useful determinism test. Its influence converges in a single round because its coupling is sparse. No nu-specific rule overrides the governed behaviour; this profile explains nu's chain and pressure shapes. Migration chatter is provenance only.
+
+### Bucket profile — xi (south lane)
+
+The xi bucket runs about 3643 monitored accesses per console day and sits near its access ceiling most days without breaching SLO. spikes hard during south maintenance windows and is otherwise unremarkable The override history here is unusually churny and stresses compaction well. It almost never unions with other buckets; its chains are single-bucket. A multipart-abort storm briefly doubled its volume with no genuine escalations. It formed the longest observed chain during the south incident, later trimmed by reach. No xi-specific rule overrides the governed behaviour; this profile explains xi's chain and pressure shapes. Migration chatter is provenance only.
+
+### Bucket profile — omicron (east lane)
+
+The omicron bucket runs about 3854 monitored accesses per console day and runs quiet for long stretches punctuated by enumeration spikes. carries a heavy authenticated baseline that rarely clusters Two overlapping override windows here motivated the compaction checksum. It is a frequent reach predecessor for beta but rarely a successor. An escalator inflated severity on its duplicates, driving the tie-break reversal. It anchors long reach paths during east bursts because its spikes align in time. No omicron-specific rule overrides the governed behaviour; this profile explains omicron's chain and pressure shapes. Migration chatter is provenance only.
+
+### Bucket profile — pi (west lane)
+
+The pi bucket runs about 4065 monitored accesses per console day and sits near its access ceiling most days without breaching SLO. spikes hard during west maintenance windows and is otherwise unremarkable Its override windows were widened after a quiet-hour false-positive wave and never narrowed. Its influence rank sits mid-table; it couples but never dominates. A page here traced to benign automation sharing tokens with a real signal. It chains readily with eta whenever their accesses fall inside the coupling gap. No pi-specific rule overrides the governed behaviour; this profile explains pi's chain and pressure shapes. Migration chatter is provenance only.
+
+### Bucket profile — rho (central lane)
+
+The rho bucket runs about 4276 monitored accesses per console day and runs quiet for long stretches punctuated by enumeration spikes. carries a heavy authenticated baseline that rarely clusters Its per-severity and all-scope windows were confused before the scopes were pinned. Its chains are short and shallow, rarely reaching past one predecessor. Nothing notable; it has been a calm lane across the review window. Its chains dissolve quickly once gap decay eats the carried pressure. No rho-specific rule overrides the governed behaviour; this profile explains rho's chain and pressure shapes. Migration chatter is provenance only.
+
+### Bucket profile — sigma (coastal lane)
+
+The sigma bucket runs about 4487 monitored accesses per console day and sits near its access ceiling most days without breaching SLO. spikes hard during coastal maintenance windows and is otherwise unremarkable It carries no standing overrides; every suppression is decided per incident. Its influence converges in a single round because its coupling is sparse. A wide override here suppressed a risk-level row and was rolled back next shift. Shared detector tokens, not a shared bucket, drive most of its links to rho. No sigma-specific rule overrides the governed behaviour; this profile explains sigma's chain and pressure shapes. Migration chatter is provenance only.
+
+### Bucket profile — tau (inland lane)
+
+The tau bucket runs about 4698 monitored accesses per console day and runs quiet for long stretches punctuated by enumeration spikes. carries a heavy authenticated baseline that rarely clusters Analysts narrowed its override scope to per-severity once wide scope hid real rows. It formed the longest observed chain during the inland incident, later trimmed by reach. A casing-drift bug split its severities into phantom classes until normalization caught it. It almost never unions with other buckets; its chains are single-bucket. No tau-specific rule overrides the governed behaviour; this profile explains tau's chain and pressure shapes. Migration chatter is provenance only.
+
+### Bucket profile — upsilon (offshore lane)
+
+The upsilon bucket runs about 4909 monitored accesses per console day and sits near its access ceiling most days without breaching SLO. spikes hard during offshore maintenance windows and is otherwise unremarkable A single long override here dominates its compaction interval set. It anchors long reach paths during offshore bursts because its spikes align in time. A region-hop burst here was the first case that exercised the wide probe boundary. It is a frequent reach predecessor for gamma but rarely a successor. No upsilon-specific rule overrides the governed behaviour; this profile explains upsilon's chain and pressure shapes. Migration chatter is provenance only.
+
+### Bucket profile — phi (metro lane)
+
+The phi bucket runs about 5120 monitored accesses per console day and runs quiet for long stretches punctuated by enumeration spikes. carries a heavy authenticated baseline that rarely clusters Its overrides were reversed on a later shift after suppressing a genuine escalation. It chains readily with theta whenever their accesses fall inside the coupling gap. Its ledger carry held too long across a quiet gap, exposing the decay-rounding bug. Its influence rank sits mid-table; it couples but never dominates. No phi-specific rule overrides the governed behaviour; this profile explains phi's chain and pressure shapes. Migration chatter is provenance only.
+
+### Bucket profile — chi (ridge lane)
+
+The chi bucket runs about 5331 monitored accesses per console day and sits near its access ceiling most days without breaching SLO. spikes hard during ridge maintenance windows and is otherwise unremarkable Its dismissal windows abut without overlapping, so compaction leaves them nearly untouched. Its chains dissolve quickly once gap decay eats the carried pressure. A stale-cache dashboard lag was misattributed to it before being ruled downstream. Its chains are short and shallow, rarely reaching past one predecessor. No chi-specific rule overrides the governed behaviour; this profile explains chi's chain and pressure shapes. Migration chatter is provenance only.
+
+### Bucket profile — psi (harbor lane)
+
+The psi bucket runs about 5542 monitored accesses per console day and runs quiet for long stretches punctuated by enumeration spikes. carries a heavy authenticated baseline that rarely clusters Its overrides expire fast, so most accesses see no suppression at all. Shared detector tokens, not a shared bucket, drive most of its links to sigma. Its duplicate rows tied to the final tie-break key, a useful determinism test. Its influence converges in a single round because its coupling is sparse. No psi-specific rule overrides the governed behaviour; this profile explains psi's chain and pressure shapes. Migration chatter is provenance only.
+
+### Bucket profile — omega (summit lane)
+
+The omega bucket runs about 5753 monitored accesses per console day and sits near its access ceiling most days without breaching SLO. spikes hard during summit maintenance windows and is otherwise unremarkable The override history here is unusually churny and stresses compaction well. It almost never unions with other buckets; its chains are single-bucket. A multipart-abort storm briefly doubled its volume with no genuine escalations. It formed the longest observed chain during the summit incident, later trimmed by reach. No omega-specific rule overrides the governed behaviour; this profile explains omega's chain and pressure shapes. Migration chatter is provenance only.
+
+### Detector calibration — cross-bucket-read
+
+The `cross-bucket-read` detector fires mostly on alpha and delta, near a 3% pre-tuning false-positive rate. Its ledger carry held too long across a quiet gap, exposing the decay-rounding bug. It chains readily with delta whenever their accesses fall inside the coupling gap. `cross-bucket-read` carries no bespoke weight; it influences the queue only through its chain, and its severity mapping was normalized for casing.
+
+### Detector calibration — unauthenticated-read
+
+The `unauthenticated-read` detector fires mostly on beta and iota, near a 16% pre-tuning false-positive rate. A stale-cache dashboard lag was misattributed to it before being ruled downstream. Its chains dissolve quickly once gap decay eats the carried pressure. `unauthenticated-read` carries no bespoke weight; it influences the queue only through its chain, and its severity mapping was normalized for casing.
+
+### Detector calibration — batch-replay
+
+The `batch-replay` detector fires mostly on gamma and xi, near a 4% pre-tuning false-positive rate. Its duplicate rows tied to the final tie-break key, a useful determinism test. Shared detector tokens, not a shared bucket, drive most of its links to xi. `batch-replay` carries no bespoke weight; it influences the queue only through its chain, and its severity mapping was normalized for casing.
+
+### Detector calibration — authenticated-read
+
+The `authenticated-read` detector fires mostly on delta and tau, near a 17% pre-tuning false-positive rate. A multipart-abort storm briefly doubled its volume with no genuine escalations. It almost never unions with other buckets; its chains are single-bucket. `authenticated-read` carries no bespoke weight; it influences the queue only through its chain, and its severity mapping was normalized for casing.
+
+### Detector calibration — policy-drift
+
+The `policy-drift` detector fires mostly on epsilon and omega, near a 5% pre-tuning false-positive rate. An escalator inflated severity on its duplicates, driving the tie-break reversal. It is a frequent reach predecessor for omega but rarely a successor. `policy-drift` carries no bespoke weight; it influences the queue only through its chain, and its severity mapping was normalized for casing.
+
+### Detector calibration — token-reuse
+
+The `token-reuse` detector fires mostly on zeta and epsilon, near a 18% pre-tuning false-positive rate. A page here traced to benign automation sharing tokens with a real signal. Its influence rank sits mid-table; it couples but never dominates. `token-reuse` carries no bespoke weight; it influences the queue only through its chain, and its severity mapping was normalized for casing.
+
+### Detector calibration — list-enumeration
+
+The `list-enumeration` detector fires mostly on eta and kappa, near a 6% pre-tuning false-positive rate. Nothing notable; it has been a calm lane across the review window. Its chains are short and shallow, rarely reaching past one predecessor. `list-enumeration` carries no bespoke weight; it influences the queue only through its chain, and its severity mapping was normalized for casing.
+
+### Detector calibration — cold-object-fetch
+
+The `cold-object-fetch` detector fires mostly on theta and omicron, near a 19% pre-tuning false-positive rate. A wide override here suppressed a risk-level row and was rolled back next shift. Its influence converges in a single round because its coupling is sparse. `cold-object-fetch` carries no bespoke weight; it influences the queue only through its chain, and its severity mapping was normalized for casing.
+
+### Detector calibration — multipart-abort
+
+The `multipart-abort` detector fires mostly on iota and upsilon, near a 7% pre-tuning false-positive rate. A casing-drift bug split its severities into phantom classes until normalization caught it. It formed the longest observed chain during the metro incident, later trimmed by reach. `multipart-abort` carries no bespoke weight; it influences the queue only through its chain, and its severity mapping was normalized for casing.
+
+### Detector calibration — acl-widen
+
+The `acl-widen` detector fires mostly on kappa and alpha, near a 20% pre-tuning false-positive rate. A region-hop burst here was the first case that exercised the wide probe boundary. It anchors long reach paths during ridge bursts because its spikes align in time. `acl-widen` carries no bespoke weight; it influences the queue only through its chain, and its severity mapping was normalized for casing.
+
+### Detector calibration — lifecycle-skip
+
+The `lifecycle-skip` detector fires mostly on lambda and zeta, near a 8% pre-tuning false-positive rate. Its ledger carry held too long across a quiet gap, exposing the decay-rounding bug. It chains readily with zeta whenever their accesses fall inside the coupling gap. `lifecycle-skip` carries no bespoke weight; it influences the queue only through its chain, and its severity mapping was normalized for casing.
+
+### Detector calibration — region-hop
+
+The `region-hop` detector fires mostly on mu and lambda, near a 21% pre-tuning false-positive rate. A stale-cache dashboard lag was misattributed to it before being ruled downstream. Its chains dissolve quickly once gap decay eats the carried pressure. `region-hop` carries no bespoke weight; it influences the queue only through its chain, and its severity mapping was normalized for casing.
+
+### Detector calibration — signed-url-replay
+
+The `signed-url-replay` detector fires mostly on nu and pi, near a 9% pre-tuning false-positive rate. Its duplicate rows tied to the final tie-break key, a useful determinism test. Shared detector tokens, not a shared bucket, drive most of its links to pi. `signed-url-replay` carries no bespoke weight; it influences the queue only through its chain, and its severity mapping was normalized for casing.
+
+### Detector calibration — anon-head
+
+The `anon-head` detector fires mostly on xi and phi, near a 22% pre-tuning false-positive rate. A multipart-abort storm briefly doubled its volume with no genuine escalations. It almost never unions with other buckets; its chains are single-bucket. `anon-head` carries no bespoke weight; it influences the queue only through its chain, and its severity mapping was normalized for casing.
+
+### Detector calibration — range-scan
+
+The `range-scan` detector fires mostly on omicron and beta, near a 10% pre-tuning false-positive rate. An escalator inflated severity on its duplicates, driving the tie-break reversal. It is a frequent reach predecessor for beta but rarely a successor. `range-scan` carries no bespoke weight; it influences the queue only through its chain, and its severity mapping was normalized for casing.
+
+### Detector calibration — versioned-restore
+
+The `versioned-restore` detector fires mostly on pi and eta, near a 23% pre-tuning false-positive rate. A page here traced to benign automation sharing tokens with a real signal. Its influence rank sits mid-table; it couples but never dominates. `versioned-restore` carries no bespoke weight; it influences the queue only through its chain, and its severity mapping was normalized for casing.
+
+### Region operations — north
+
+The north lane spans alpha, beta and gamma. Nadia notes that north carries a distinct maintenance cadence that shifts override coverage on those buckets together. Its influence rank sits mid-table; it couples but never dominates. A page here traced to benign automation sharing tokens with a real signal. Cross-lane chains into north are rare and short-lived.
+
+### Region operations — south
+
+The south lane spans beta, gamma and delta. Ilya notes that south carries a distinct maintenance cadence that shifts override coverage on those buckets together. Its chains are short and shallow, rarely reaching past one predecessor. Nothing notable; it has been a calm lane across the review window. Cross-lane chains into south are rare and short-lived.
+
+### Region operations — east
+
+The east lane spans gamma, delta and epsilon. Marta notes that east carries a distinct maintenance cadence that shifts override coverage on those buckets together. Its influence converges in a single round because its coupling is sparse. A wide override here suppressed a risk-level row and was rolled back next shift. Cross-lane chains into east are rare and short-lived.
+
+### Region operations — west
+
+The west lane spans delta, epsilon and zeta. Priya notes that west carries a distinct maintenance cadence that shifts override coverage on those buckets together. It formed the longest observed chain during the west incident, later trimmed by reach. A casing-drift bug split its severities into phantom classes until normalization caught it. Cross-lane chains into west are rare and short-lived.
+
+### Region operations — central
+
+The central lane spans epsilon, zeta and eta. Rao notes that central carries a distinct maintenance cadence that shifts override coverage on those buckets together. It anchors long reach paths during central bursts because its spikes align in time. A region-hop burst here was the first case that exercised the wide probe boundary. Cross-lane chains into central are rare and short-lived.
+
+### Region operations — coastal
+
+The coastal lane spans zeta, eta and theta. Chen notes that coastal carries a distinct maintenance cadence that shifts override coverage on those buckets together. It chains readily with eta whenever their accesses fall inside the coupling gap. Its ledger carry held too long across a quiet gap, exposing the decay-rounding bug. Cross-lane chains into coastal are rare and short-lived.
+
+### Region operations — inland
+
+The inland lane spans eta, theta and iota. Okafor notes that inland carries a distinct maintenance cadence that shifts override coverage on those buckets together. Its chains dissolve quickly once gap decay eats the carried pressure. A stale-cache dashboard lag was misattributed to it before being ruled downstream. Cross-lane chains into inland are rare and short-lived.
+
+### Region operations — offshore
+
+The offshore lane spans theta, iota and kappa. Silva notes that offshore carries a distinct maintenance cadence that shifts override coverage on those buckets together. Shared detector tokens, not a shared bucket, drive most of its links to iota. Its duplicate rows tied to the final tie-break key, a useful determinism test. Cross-lane chains into offshore are rare and short-lived.
+
+### Region operations — metro
+
+The metro lane spans iota, kappa and lambda. Haddad notes that metro carries a distinct maintenance cadence that shifts override coverage on those buckets together. It almost never unions with other buckets; its chains are single-bucket. A multipart-abort storm briefly doubled its volume with no genuine escalations. Cross-lane chains into metro are rare and short-lived.
+
+### Region operations — ridge
+
+The ridge lane spans kappa, lambda and mu. Lindqvist notes that ridge carries a distinct maintenance cadence that shifts override coverage on those buckets together. It is a frequent reach predecessor for lambda but rarely a successor. An escalator inflated severity on its duplicates, driving the tie-break reversal. Cross-lane chains into ridge are rare and short-lived.
+
+### Region operations — harbor
+
+The harbor lane spans lambda, mu and nu. Amara notes that harbor carries a distinct maintenance cadence that shifts override coverage on those buckets together. Its influence rank sits mid-table; it couples but never dominates. A page here traced to benign automation sharing tokens with a real signal. Cross-lane chains into harbor are rare and short-lived.
+
+### Region operations — summit
+
+The summit lane spans mu, nu and xi. Boyd notes that summit carries a distinct maintenance cadence that shifts override coverage on those buckets together. Its chains are short and shallow, rarely reaching past one predecessor. Nothing notable; it has been a calm lane across the review window. Cross-lane chains into summit are rare and short-lived.
+
+
+## Override-window case studies
+
+
+- Override case 1: a all-scope window on alpha spanning [100,150) was added after Nadia reviewed a page here traced to benign automation sharing tokens with a real signal; it compacts against alpha's existing intervals without changing the governed queue.
+
+- Override case 2: a high-scope window on beta spanning [197,308) was widened after Ilya reviewed a stale-cache dashboard lag was misattributed to it before being ruled downstream; it compacts against beta's existing intervals without changing the governed queue.
+
+- Override case 3: a critical-scope window on gamma spanning [294,466) was narrowed after Marta reviewed a wide override here suppressed a risk-level row and was rolled back next shift; it compacts against gamma's existing intervals without changing the governed queue.
+
+- Override case 4: a all-scope window on delta spanning [391,624) was reversed after Priya reviewed a multipart-abort storm briefly doubled its volume with no genuine escalations; it compacts against delta's existing intervals without changing the governed queue.
+
+- Override case 5: a high-scope window on epsilon spanning [488,782) was left in place after Rao reviewed a region-hop burst here was the first case that exercised the wide probe boundary; it compacts against epsilon's existing intervals without changing the governed queue.
+
+- Override case 6: a critical-scope window on zeta spanning [585,940) was added after Chen reviewed a page here traced to benign automation sharing tokens with a real signal; it compacts against zeta's existing intervals without changing the governed queue.
+
+- Override case 7: a all-scope window on eta spanning [682,1098) was widened after Okafor reviewed a stale-cache dashboard lag was misattributed to it before being ruled downstream; it compacts against eta's existing intervals without changing the governed queue.
+
+- Override case 8: a high-scope window on theta spanning [779,1256) was narrowed after Silva reviewed a wide override here suppressed a risk-level row and was rolled back next shift; it compacts against theta's existing intervals without changing the governed queue.
+
+- Override case 9: a critical-scope window on iota spanning [876,1414) was reversed after Haddad reviewed a multipart-abort storm briefly doubled its volume with no genuine escalations; it compacts against iota's existing intervals without changing the governed queue.
+
+- Override case 10: a all-scope window on kappa spanning [973,1572) was left in place after Lindqvist reviewed a region-hop burst here was the first case that exercised the wide probe boundary; it compacts against kappa's existing intervals without changing the governed queue.
+
+- Override case 11: a high-scope window on lambda spanning [170,230) was added after Amara reviewed a page here traced to benign automation sharing tokens with a real signal; it compacts against lambda's existing intervals without changing the governed queue.
+
+- Override case 12: a critical-scope window on mu spanning [267,388) was widened after Boyd reviewed a stale-cache dashboard lag was misattributed to it before being ruled downstream; it compacts against mu's existing intervals without changing the governed queue.
+
+- Override case 13: a all-scope window on nu spanning [364,546) was narrowed after Cortes reviewed a wide override here suppressed a risk-level row and was rolled back next shift; it compacts against nu's existing intervals without changing the governed queue.
+
+- Override case 14: a high-scope window on xi spanning [461,704) was reversed after Devi reviewed a multipart-abort storm briefly doubled its volume with no genuine escalations; it compacts against xi's existing intervals without changing the governed queue.
+
+- Override case 15: a critical-scope window on omicron spanning [558,862) was left in place after Engel reviewed a region-hop burst here was the first case that exercised the wide probe boundary; it compacts against omicron's existing intervals without changing the governed queue.
+
+- Override case 16: a all-scope window on pi spanning [655,1020) was added after Farouk reviewed a page here traced to benign automation sharing tokens with a real signal; it compacts against pi's existing intervals without changing the governed queue.
+
+- Override case 17: a high-scope window on rho spanning [752,1178) was widened after Ganesh reviewed a stale-cache dashboard lag was misattributed to it before being ruled downstream; it compacts against rho's existing intervals without changing the governed queue.
+
+- Override case 18: a critical-scope window on sigma spanning [849,1336) was narrowed after Ivers reviewed a wide override here suppressed a risk-level row and was rolled back next shift; it compacts against sigma's existing intervals without changing the governed queue.
+
+- Override case 19: a all-scope window on tau spanning [946,1494) was reversed after Jang reviewed a multipart-abort storm briefly doubled its volume with no genuine escalations; it compacts against tau's existing intervals without changing the governed queue.
+
+- Override case 20: a high-scope window on upsilon spanning [143,752) was left in place after Kaur reviewed a region-hop burst here was the first case that exercised the wide probe boundary; it compacts against upsilon's existing intervals without changing the governed queue.
+
+- Override case 21: a critical-scope window on phi spanning [240,310) was added after Nadia reviewed a page here traced to benign automation sharing tokens with a real signal; it compacts against phi's existing intervals without changing the governed queue.
+
+- Override case 22: a all-scope window on chi spanning [337,468) was widened after Ilya reviewed a stale-cache dashboard lag was misattributed to it before being ruled downstream; it compacts against chi's existing intervals without changing the governed queue.
+
+- Override case 23: a high-scope window on psi spanning [434,626) was narrowed after Marta reviewed a wide override here suppressed a risk-level row and was rolled back next shift; it compacts against psi's existing intervals without changing the governed queue.
+
+- Override case 24: a critical-scope window on omega spanning [531,784) was reversed after Priya reviewed a multipart-abort storm briefly doubled its volume with no genuine escalations; it compacts against omega's existing intervals without changing the governed queue.
+
+- Override case 25: a all-scope window on alpha spanning [628,942) was left in place after Rao reviewed a region-hop burst here was the first case that exercised the wide probe boundary; it compacts against alpha's existing intervals without changing the governed queue.
+
+- Override case 26: a high-scope window on beta spanning [725,1100) was added after Chen reviewed a page here traced to benign automation sharing tokens with a real signal; it compacts against beta's existing intervals without changing the governed queue.
+
+- Override case 27: a critical-scope window on gamma spanning [822,1258) was widened after Okafor reviewed a stale-cache dashboard lag was misattributed to it before being ruled downstream; it compacts against gamma's existing intervals without changing the governed queue.
+
+- Override case 28: a all-scope window on delta spanning [919,1416) was narrowed after Silva reviewed a wide override here suppressed a risk-level row and was rolled back next shift; it compacts against delta's existing intervals without changing the governed queue.
+
+- Override case 29: a high-scope window on epsilon spanning [116,674) was reversed after Haddad reviewed a multipart-abort storm briefly doubled its volume with no genuine escalations; it compacts against epsilon's existing intervals without changing the governed queue.
+
+- Override case 30: a critical-scope window on zeta spanning [213,832) was left in place after Lindqvist reviewed a region-hop burst here was the first case that exercised the wide probe boundary; it compacts against zeta's existing intervals without changing the governed queue.
+
+- Override case 31: a all-scope window on eta spanning [310,390) was added after Amara reviewed a page here traced to benign automation sharing tokens with a real signal; it compacts against eta's existing intervals without changing the governed queue.
+
+- Override case 32: a high-scope window on theta spanning [407,548) was widened after Boyd reviewed a stale-cache dashboard lag was misattributed to it before being ruled downstream; it compacts against theta's existing intervals without changing the governed queue.
+
+- Override case 33: a critical-scope window on iota spanning [504,706) was narrowed after Cortes reviewed a wide override here suppressed a risk-level row and was rolled back next shift; it compacts against iota's existing intervals without changing the governed queue.
+
+- Override case 34: a all-scope window on kappa spanning [601,864) was reversed after Devi reviewed a multipart-abort storm briefly doubled its volume with no genuine escalations; it compacts against kappa's existing intervals without changing the governed queue.
+
+- Override case 35: a high-scope window on lambda spanning [698,1022) was left in place after Engel reviewed a region-hop burst here was the first case that exercised the wide probe boundary; it compacts against lambda's existing intervals without changing the governed queue.
+
+- Override case 36: a critical-scope window on mu spanning [795,1180) was added after Farouk reviewed a page here traced to benign automation sharing tokens with a real signal; it compacts against mu's existing intervals without changing the governed queue.
+
+- Override case 37: a all-scope window on nu spanning [892,1338) was widened after Ganesh reviewed a stale-cache dashboard lag was misattributed to it before being ruled downstream; it compacts against nu's existing intervals without changing the governed queue.
+
+- Override case 38: a high-scope window on xi spanning [989,1496) was narrowed after Ivers reviewed a wide override here suppressed a risk-level row and was rolled back next shift; it compacts against xi's existing intervals without changing the governed queue.
+
+- Override case 39: a critical-scope window on omicron spanning [186,754) was reversed after Jang reviewed a multipart-abort storm briefly doubled its volume with no genuine escalations; it compacts against omicron's existing intervals without changing the governed queue.
+
+- Override case 40: a all-scope window on pi spanning [283,912) was left in place after Kaur reviewed a region-hop burst here was the first case that exercised the wide probe boundary; it compacts against pi's existing intervals without changing the governed queue.
+
+- Override case 41: a high-scope window on rho spanning [380,470) was added after Nadia reviewed a page here traced to benign automation sharing tokens with a real signal; it compacts against rho's existing intervals without changing the governed queue.
+
+- Override case 42: a critical-scope window on sigma spanning [477,628) was widened after Ilya reviewed a stale-cache dashboard lag was misattributed to it before being ruled downstream; it compacts against sigma's existing intervals without changing the governed queue.
+
+- Override case 43: a all-scope window on tau spanning [574,786) was narrowed after Marta reviewed a wide override here suppressed a risk-level row and was rolled back next shift; it compacts against tau's existing intervals without changing the governed queue.
+
+- Override case 44: a high-scope window on upsilon spanning [671,944) was reversed after Priya reviewed a multipart-abort storm briefly doubled its volume with no genuine escalations; it compacts against upsilon's existing intervals without changing the governed queue.
+
+- Override case 45: a critical-scope window on phi spanning [768,1102) was left in place after Rao reviewed a region-hop burst here was the first case that exercised the wide probe boundary; it compacts against phi's existing intervals without changing the governed queue.
+
+- Override case 46: a all-scope window on chi spanning [865,1260) was added after Chen reviewed a page here traced to benign automation sharing tokens with a real signal; it compacts against chi's existing intervals without changing the governed queue.
+
+- Override case 47: a high-scope window on psi spanning [962,1418) was widened after Okafor reviewed a stale-cache dashboard lag was misattributed to it before being ruled downstream; it compacts against psi's existing intervals without changing the governed queue.
+
+- Override case 48: a critical-scope window on omega spanning [159,676) was narrowed after Silva reviewed a wide override here suppressed a risk-level row and was rolled back next shift; it compacts against omega's existing intervals without changing the governed queue.
+
+- Override case 49: a all-scope window on alpha spanning [256,834) was reversed after Haddad reviewed a multipart-abort storm briefly doubled its volume with no genuine escalations; it compacts against alpha's existing intervals without changing the governed queue.
+
+- Override case 50: a high-scope window on beta spanning [353,992) was left in place after Lindqvist reviewed a region-hop burst here was the first case that exercised the wide probe boundary; it compacts against beta's existing intervals without changing the governed queue.
+
+- Override case 51: a critical-scope window on gamma spanning [450,550) was added after Amara reviewed a page here traced to benign automation sharing tokens with a real signal; it compacts against gamma's existing intervals without changing the governed queue.
+
+- Override case 52: a all-scope window on delta spanning [547,708) was widened after Boyd reviewed a stale-cache dashboard lag was misattributed to it before being ruled downstream; it compacts against delta's existing intervals without changing the governed queue.
+
+- Override case 53: a high-scope window on epsilon spanning [644,866) was narrowed after Cortes reviewed a wide override here suppressed a risk-level row and was rolled back next shift; it compacts against epsilon's existing intervals without changing the governed queue.
+
+- Override case 54: a critical-scope window on zeta spanning [741,1024) was reversed after Devi reviewed a multipart-abort storm briefly doubled its volume with no genuine escalations; it compacts against zeta's existing intervals without changing the governed queue.
+
+- Override case 55: a all-scope window on eta spanning [838,1182) was left in place after Engel reviewed a region-hop burst here was the first case that exercised the wide probe boundary; it compacts against eta's existing intervals without changing the governed queue.
+
+- Override case 56: a high-scope window on theta spanning [935,1340) was added after Farouk reviewed a page here traced to benign automation sharing tokens with a real signal; it compacts against theta's existing intervals without changing the governed queue.
+
+- Override case 57: a critical-scope window on iota spanning [132,598) was widened after Ganesh reviewed a stale-cache dashboard lag was misattributed to it before being ruled downstream; it compacts against iota's existing intervals without changing the governed queue.
+
+- Override case 58: a all-scope window on kappa spanning [229,756) was narrowed after Ivers reviewed a wide override here suppressed a risk-level row and was rolled back next shift; it compacts against kappa's existing intervals without changing the governed queue.
+
+- Override case 59: a high-scope window on lambda spanning [326,914) was reversed after Jang reviewed a multipart-abort storm briefly doubled its volume with no genuine escalations; it compacts against lambda's existing intervals without changing the governed queue.
+
+- Override case 60: a critical-scope window on mu spanning [423,1072) was left in place after Kaur reviewed a region-hop burst here was the first case that exercised the wide probe boundary; it compacts against mu's existing intervals without changing the governed queue.
+
+- Override case 61: a all-scope window on nu spanning [520,630) was added after Nadia reviewed a page here traced to benign automation sharing tokens with a real signal; it compacts against nu's existing intervals without changing the governed queue.
+
+- Override case 62: a high-scope window on xi spanning [617,788) was widened after Ilya reviewed a stale-cache dashboard lag was misattributed to it before being ruled downstream; it compacts against xi's existing intervals without changing the governed queue.
+
+- Override case 63: a critical-scope window on omicron spanning [714,946) was narrowed after Marta reviewed a wide override here suppressed a risk-level row and was rolled back next shift; it compacts against omicron's existing intervals without changing the governed queue.
+
+- Override case 64: a all-scope window on pi spanning [811,1104) was reversed after Priya reviewed a multipart-abort storm briefly doubled its volume with no genuine escalations; it compacts against pi's existing intervals without changing the governed queue.
+
+- Override case 65: a high-scope window on rho spanning [908,1262) was left in place after Rao reviewed a region-hop burst here was the first case that exercised the wide probe boundary; it compacts against rho's existing intervals without changing the governed queue.
+
+- Override case 66: a critical-scope window on sigma spanning [105,520) was added after Chen reviewed a page here traced to benign automation sharing tokens with a real signal; it compacts against sigma's existing intervals without changing the governed queue.
+
+- Override case 67: a all-scope window on tau spanning [202,678) was widened after Okafor reviewed a stale-cache dashboard lag was misattributed to it before being ruled downstream; it compacts against tau's existing intervals without changing the governed queue.
+
+- Override case 68: a high-scope window on upsilon spanning [299,836) was narrowed after Silva reviewed a wide override here suppressed a risk-level row and was rolled back next shift; it compacts against upsilon's existing intervals without changing the governed queue.
+
+- Override case 69: a critical-scope window on phi spanning [396,994) was reversed after Haddad reviewed a multipart-abort storm briefly doubled its volume with no genuine escalations; it compacts against phi's existing intervals without changing the governed queue.
+
+- Override case 70: a all-scope window on chi spanning [493,552) was left in place after Lindqvist reviewed a region-hop burst here was the first case that exercised the wide probe boundary; it compacts against chi's existing intervals without changing the governed queue.
+
+
+## Review timeline — extended
+
+
+- Shift 200 — capacity review on alpha (north): A page here traced to benign automation sharing tokens with a real signal. Nadia recorded it; the compile contract was unchanged.
+
+- Shift 201 — false-positive audit for `unauthenticated-read` on beta: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ilya recorded it; the compile contract was unchanged.
+
+- Shift 202 — override-policy note on gamma: A wide override here suppressed a risk-level row and was rolled back next shift. Marta recorded it; the compile contract was unchanged.
+
+- Shift 203 — data-quality finding on the west delta feed: A multipart-abort storm briefly doubled its volume with no genuine escalations. Priya recorded it; the compile contract was unchanged.
+
+- Shift 204 — dependency incident touching epsilon: A region-hop burst here was the first case that exercised the wide probe boundary. Rao recorded it; the compile contract was unchanged.
+
+- Shift 205 — correlation study, zeta vs epsilon: A page here traced to benign automation sharing tokens with a real signal. Chen recorded it; the compile contract was unchanged.
+
+- Shift 206 — detector tuning for `list-enumeration`: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Okafor recorded it; the compile contract was unchanged.
+
+- Shift 207 — on-call handoff, offshore lane: A wide override here suppressed a risk-level row and was rolled back next shift. Silva recorded it; the compile contract was unchanged.
+
+- Shift 208 — change-review debate on iota: A multipart-abort storm briefly doubled its volume with no genuine escalations. Haddad recorded it; the compile contract was unchanged.
+
+- Shift 209 — post-incident follow-up for kappa: A region-hop burst here was the first case that exercised the wide probe boundary. Lindqvist recorded it; the compile contract was unchanged.
+
+- Shift 210 — compaction spot-check on lambda: A page here traced to benign automation sharing tokens with a real signal. Amara recorded it; the compile contract was unchanged.
+
+- Shift 211 — ledger review after a mu escalation: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Boyd recorded it; the compile contract was unchanged.
+
+- Shift 212 — capacity review on nu (north): A wide override here suppressed a risk-level row and was rolled back next shift. Cortes recorded it; the compile contract was unchanged.
+
+- Shift 213 — false-positive audit for `anon-head` on xi: A multipart-abort storm briefly doubled its volume with no genuine escalations. Devi recorded it; the compile contract was unchanged.
+
+- Shift 214 — override-policy note on omicron: A region-hop burst here was the first case that exercised the wide probe boundary. Engel recorded it; the compile contract was unchanged.
+
+- Shift 215 — data-quality finding on the west pi feed: A page here traced to benign automation sharing tokens with a real signal. Farouk recorded it; the compile contract was unchanged.
+
+- Shift 216 — dependency incident touching rho: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ganesh recorded it; the compile contract was unchanged.
+
+- Shift 217 — correlation study, sigma vs rho: A wide override here suppressed a risk-level row and was rolled back next shift. Ivers recorded it; the compile contract was unchanged.
+
+- Shift 218 — detector tuning for `batch-replay`: A multipart-abort storm briefly doubled its volume with no genuine escalations. Jang recorded it; the compile contract was unchanged.
+
+- Shift 219 — on-call handoff, offshore lane: A region-hop burst here was the first case that exercised the wide probe boundary. Kaur recorded it; the compile contract was unchanged.
+
+- Shift 220 — change-review debate on phi: A page here traced to benign automation sharing tokens with a real signal. Nadia recorded it; the compile contract was unchanged.
+
+- Shift 221 — post-incident follow-up for chi: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ilya recorded it; the compile contract was unchanged.
+
+- Shift 222 — compaction spot-check on psi: A wide override here suppressed a risk-level row and was rolled back next shift. Marta recorded it; the compile contract was unchanged.
+
+- Shift 223 — ledger review after a omega escalation: A multipart-abort storm briefly doubled its volume with no genuine escalations. Priya recorded it; the compile contract was unchanged.
+
+- Shift 224 — capacity review on alpha (north): A region-hop burst here was the first case that exercised the wide probe boundary. Rao recorded it; the compile contract was unchanged.
+
+- Shift 225 — false-positive audit for `acl-widen` on beta: A page here traced to benign automation sharing tokens with a real signal. Chen recorded it; the compile contract was unchanged.
+
+- Shift 226 — override-policy note on gamma: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Okafor recorded it; the compile contract was unchanged.
+
+- Shift 227 — data-quality finding on the west delta feed: A wide override here suppressed a risk-level row and was rolled back next shift. Silva recorded it; the compile contract was unchanged.
+
+- Shift 228 — dependency incident touching epsilon: A multipart-abort storm briefly doubled its volume with no genuine escalations. Haddad recorded it; the compile contract was unchanged.
+
+- Shift 229 — correlation study, zeta vs epsilon: A region-hop burst here was the first case that exercised the wide probe boundary. Lindqvist recorded it; the compile contract was unchanged.
+
+- Shift 230 — detector tuning for `range-scan`: A page here traced to benign automation sharing tokens with a real signal. Amara recorded it; the compile contract was unchanged.
+
+- Shift 231 — on-call handoff, offshore lane: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Boyd recorded it; the compile contract was unchanged.
+
+- Shift 232 — change-review debate on iota: A wide override here suppressed a risk-level row and was rolled back next shift. Cortes recorded it; the compile contract was unchanged.
+
+- Shift 233 — post-incident follow-up for kappa: A multipart-abort storm briefly doubled its volume with no genuine escalations. Devi recorded it; the compile contract was unchanged.
+
+- Shift 234 — compaction spot-check on lambda: A region-hop burst here was the first case that exercised the wide probe boundary. Engel recorded it; the compile contract was unchanged.
+
+- Shift 235 — ledger review after a mu escalation: A page here traced to benign automation sharing tokens with a real signal. Farouk recorded it; the compile contract was unchanged.
+
+- Shift 236 — capacity review on nu (north): A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ganesh recorded it; the compile contract was unchanged.
+
+- Shift 237 — false-positive audit for `token-reuse` on xi: A wide override here suppressed a risk-level row and was rolled back next shift. Ivers recorded it; the compile contract was unchanged.
+
+- Shift 238 — override-policy note on omicron: A multipart-abort storm briefly doubled its volume with no genuine escalations. Jang recorded it; the compile contract was unchanged.
+
+- Shift 239 — data-quality finding on the west pi feed: A region-hop burst here was the first case that exercised the wide probe boundary. Kaur recorded it; the compile contract was unchanged.
+
+- Shift 240 — dependency incident touching rho: A page here traced to benign automation sharing tokens with a real signal. Nadia recorded it; the compile contract was unchanged.
+
+- Shift 241 — correlation study, sigma vs rho: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ilya recorded it; the compile contract was unchanged.
+
+- Shift 242 — detector tuning for `lifecycle-skip`: A wide override here suppressed a risk-level row and was rolled back next shift. Marta recorded it; the compile contract was unchanged.
+
+- Shift 243 — on-call handoff, offshore lane: A multipart-abort storm briefly doubled its volume with no genuine escalations. Priya recorded it; the compile contract was unchanged.
+
+- Shift 244 — change-review debate on phi: A region-hop burst here was the first case that exercised the wide probe boundary. Rao recorded it; the compile contract was unchanged.
+
+- Shift 245 — post-incident follow-up for chi: A page here traced to benign automation sharing tokens with a real signal. Chen recorded it; the compile contract was unchanged.
+
+- Shift 246 — compaction spot-check on psi: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Okafor recorded it; the compile contract was unchanged.
+
+- Shift 247 — ledger review after a omega escalation: A wide override here suppressed a risk-level row and was rolled back next shift. Silva recorded it; the compile contract was unchanged.
+
+- Shift 248 — capacity review on alpha (north): A multipart-abort storm briefly doubled its volume with no genuine escalations. Haddad recorded it; the compile contract was unchanged.
+
+- Shift 249 — false-positive audit for `unauthenticated-read` on beta: A region-hop burst here was the first case that exercised the wide probe boundary. Lindqvist recorded it; the compile contract was unchanged.
+
+- Shift 250 — override-policy note on gamma: A page here traced to benign automation sharing tokens with a real signal. Amara recorded it; the compile contract was unchanged.
+
+- Shift 251 — data-quality finding on the west delta feed: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Boyd recorded it; the compile contract was unchanged.
+
+- Shift 252 — dependency incident touching epsilon: A wide override here suppressed a risk-level row and was rolled back next shift. Cortes recorded it; the compile contract was unchanged.
+
+- Shift 253 — correlation study, zeta vs epsilon: A multipart-abort storm briefly doubled its volume with no genuine escalations. Devi recorded it; the compile contract was unchanged.
+
+- Shift 254 — detector tuning for `list-enumeration`: A region-hop burst here was the first case that exercised the wide probe boundary. Engel recorded it; the compile contract was unchanged.
+
+- Shift 255 — on-call handoff, offshore lane: A page here traced to benign automation sharing tokens with a real signal. Farouk recorded it; the compile contract was unchanged.
+
+- Shift 256 — change-review debate on iota: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ganesh recorded it; the compile contract was unchanged.
+
+- Shift 257 — post-incident follow-up for kappa: A wide override here suppressed a risk-level row and was rolled back next shift. Ivers recorded it; the compile contract was unchanged.
+
+- Shift 258 — compaction spot-check on lambda: A multipart-abort storm briefly doubled its volume with no genuine escalations. Jang recorded it; the compile contract was unchanged.
+
+- Shift 259 — ledger review after a mu escalation: A region-hop burst here was the first case that exercised the wide probe boundary. Kaur recorded it; the compile contract was unchanged.
+
+- Shift 260 — capacity review on nu (north): A page here traced to benign automation sharing tokens with a real signal. Nadia recorded it; the compile contract was unchanged.
+
+- Shift 261 — false-positive audit for `anon-head` on xi: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ilya recorded it; the compile contract was unchanged.
+
+- Shift 262 — override-policy note on omicron: A wide override here suppressed a risk-level row and was rolled back next shift. Marta recorded it; the compile contract was unchanged.
+
+- Shift 263 — data-quality finding on the west pi feed: A multipart-abort storm briefly doubled its volume with no genuine escalations. Priya recorded it; the compile contract was unchanged.
+
+- Shift 264 — dependency incident touching rho: A region-hop burst here was the first case that exercised the wide probe boundary. Rao recorded it; the compile contract was unchanged.
+
+- Shift 265 — correlation study, sigma vs rho: A page here traced to benign automation sharing tokens with a real signal. Chen recorded it; the compile contract was unchanged.
+
+- Shift 266 — detector tuning for `batch-replay`: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Okafor recorded it; the compile contract was unchanged.
+
+- Shift 267 — on-call handoff, offshore lane: A wide override here suppressed a risk-level row and was rolled back next shift. Silva recorded it; the compile contract was unchanged.
+
+- Shift 268 — change-review debate on phi: A multipart-abort storm briefly doubled its volume with no genuine escalations. Haddad recorded it; the compile contract was unchanged.
+
+- Shift 269 — post-incident follow-up for chi: A region-hop burst here was the first case that exercised the wide probe boundary. Lindqvist recorded it; the compile contract was unchanged.
+
+- Shift 270 — compaction spot-check on psi: A page here traced to benign automation sharing tokens with a real signal. Amara recorded it; the compile contract was unchanged.
+
+- Shift 271 — ledger review after a omega escalation: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Boyd recorded it; the compile contract was unchanged.
+
+- Shift 272 — capacity review on alpha (north): A wide override here suppressed a risk-level row and was rolled back next shift. Cortes recorded it; the compile contract was unchanged.
+
+- Shift 273 — false-positive audit for `acl-widen` on beta: A multipart-abort storm briefly doubled its volume with no genuine escalations. Devi recorded it; the compile contract was unchanged.
+
+- Shift 274 — override-policy note on gamma: A region-hop burst here was the first case that exercised the wide probe boundary. Engel recorded it; the compile contract was unchanged.
+
+- Shift 275 — data-quality finding on the west delta feed: A page here traced to benign automation sharing tokens with a real signal. Farouk recorded it; the compile contract was unchanged.
+
+- Shift 276 — dependency incident touching epsilon: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ganesh recorded it; the compile contract was unchanged.
+
+- Shift 277 — correlation study, zeta vs epsilon: A wide override here suppressed a risk-level row and was rolled back next shift. Ivers recorded it; the compile contract was unchanged.
+
+- Shift 278 — detector tuning for `range-scan`: A multipart-abort storm briefly doubled its volume with no genuine escalations. Jang recorded it; the compile contract was unchanged.
+
+- Shift 279 — on-call handoff, offshore lane: A region-hop burst here was the first case that exercised the wide probe boundary. Kaur recorded it; the compile contract was unchanged.
+
+- Shift 280 — change-review debate on iota: A page here traced to benign automation sharing tokens with a real signal. Nadia recorded it; the compile contract was unchanged.
+
+- Shift 281 — post-incident follow-up for kappa: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ilya recorded it; the compile contract was unchanged.
+
+- Shift 282 — compaction spot-check on lambda: A wide override here suppressed a risk-level row and was rolled back next shift. Marta recorded it; the compile contract was unchanged.
+
+- Shift 283 — ledger review after a mu escalation: A multipart-abort storm briefly doubled its volume with no genuine escalations. Priya recorded it; the compile contract was unchanged.
+
+- Shift 284 — capacity review on nu (north): A region-hop burst here was the first case that exercised the wide probe boundary. Rao recorded it; the compile contract was unchanged.
+
+- Shift 285 — false-positive audit for `token-reuse` on xi: A page here traced to benign automation sharing tokens with a real signal. Chen recorded it; the compile contract was unchanged.
+
+- Shift 286 — override-policy note on omicron: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Okafor recorded it; the compile contract was unchanged.
+
+- Shift 287 — data-quality finding on the west pi feed: A wide override here suppressed a risk-level row and was rolled back next shift. Silva recorded it; the compile contract was unchanged.
+
+- Shift 288 — dependency incident touching rho: A multipart-abort storm briefly doubled its volume with no genuine escalations. Haddad recorded it; the compile contract was unchanged.
+
+- Shift 289 — correlation study, sigma vs rho: A region-hop burst here was the first case that exercised the wide probe boundary. Lindqvist recorded it; the compile contract was unchanged.
+
+- Shift 290 — detector tuning for `lifecycle-skip`: A page here traced to benign automation sharing tokens with a real signal. Amara recorded it; the compile contract was unchanged.
+
+- Shift 291 — on-call handoff, offshore lane: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Boyd recorded it; the compile contract was unchanged.
+
+- Shift 292 — change-review debate on phi: A wide override here suppressed a risk-level row and was rolled back next shift. Cortes recorded it; the compile contract was unchanged.
+
+- Shift 293 — post-incident follow-up for chi: A multipart-abort storm briefly doubled its volume with no genuine escalations. Devi recorded it; the compile contract was unchanged.
+
+- Shift 294 — compaction spot-check on psi: A region-hop burst here was the first case that exercised the wide probe boundary. Engel recorded it; the compile contract was unchanged.
+
+- Shift 295 — ledger review after a omega escalation: A page here traced to benign automation sharing tokens with a real signal. Farouk recorded it; the compile contract was unchanged.
+
+- Shift 296 — capacity review on alpha (north): A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ganesh recorded it; the compile contract was unchanged.
+
+- Shift 297 — false-positive audit for `unauthenticated-read` on beta: A wide override here suppressed a risk-level row and was rolled back next shift. Ivers recorded it; the compile contract was unchanged.
+
+- Shift 298 — override-policy note on gamma: A multipart-abort storm briefly doubled its volume with no genuine escalations. Jang recorded it; the compile contract was unchanged.
+
+- Shift 299 — data-quality finding on the west delta feed: A region-hop burst here was the first case that exercised the wide probe boundary. Kaur recorded it; the compile contract was unchanged.
+
+- Shift 300 — dependency incident touching epsilon: A page here traced to benign automation sharing tokens with a real signal. Nadia recorded it; the compile contract was unchanged.
+
+- Shift 301 — correlation study, zeta vs epsilon: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ilya recorded it; the compile contract was unchanged.
+
+- Shift 302 — detector tuning for `list-enumeration`: A wide override here suppressed a risk-level row and was rolled back next shift. Marta recorded it; the compile contract was unchanged.
+
+- Shift 303 — on-call handoff, offshore lane: A multipart-abort storm briefly doubled its volume with no genuine escalations. Priya recorded it; the compile contract was unchanged.
+
+- Shift 304 — change-review debate on iota: A region-hop burst here was the first case that exercised the wide probe boundary. Rao recorded it; the compile contract was unchanged.
+
+- Shift 305 — post-incident follow-up for kappa: A page here traced to benign automation sharing tokens with a real signal. Chen recorded it; the compile contract was unchanged.
+
+- Shift 306 — compaction spot-check on lambda: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Okafor recorded it; the compile contract was unchanged.
+
+- Shift 307 — ledger review after a mu escalation: A wide override here suppressed a risk-level row and was rolled back next shift. Silva recorded it; the compile contract was unchanged.
+
+- Shift 308 — capacity review on nu (north): A multipart-abort storm briefly doubled its volume with no genuine escalations. Haddad recorded it; the compile contract was unchanged.
+
+- Shift 309 — false-positive audit for `anon-head` on xi: A region-hop burst here was the first case that exercised the wide probe boundary. Lindqvist recorded it; the compile contract was unchanged.
+
+- Shift 310 — override-policy note on omicron: A page here traced to benign automation sharing tokens with a real signal. Amara recorded it; the compile contract was unchanged.
+
+- Shift 311 — data-quality finding on the west pi feed: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Boyd recorded it; the compile contract was unchanged.
+
+- Shift 312 — dependency incident touching rho: A wide override here suppressed a risk-level row and was rolled back next shift. Cortes recorded it; the compile contract was unchanged.
+
+- Shift 313 — correlation study, sigma vs rho: A multipart-abort storm briefly doubled its volume with no genuine escalations. Devi recorded it; the compile contract was unchanged.
+
+- Shift 314 — detector tuning for `batch-replay`: A region-hop burst here was the first case that exercised the wide probe boundary. Engel recorded it; the compile contract was unchanged.
+
+- Shift 315 — on-call handoff, offshore lane: A page here traced to benign automation sharing tokens with a real signal. Farouk recorded it; the compile contract was unchanged.
+
+- Shift 316 — change-review debate on phi: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ganesh recorded it; the compile contract was unchanged.
+
+- Shift 317 — post-incident follow-up for chi: A wide override here suppressed a risk-level row and was rolled back next shift. Ivers recorded it; the compile contract was unchanged.
+
+- Shift 318 — compaction spot-check on psi: A multipart-abort storm briefly doubled its volume with no genuine escalations. Jang recorded it; the compile contract was unchanged.
+
+- Shift 319 — ledger review after a omega escalation: A region-hop burst here was the first case that exercised the wide probe boundary. Kaur recorded it; the compile contract was unchanged.
+
+- Shift 320 — capacity review on alpha (north): A page here traced to benign automation sharing tokens with a real signal. Nadia recorded it; the compile contract was unchanged.
+
+- Shift 321 — false-positive audit for `acl-widen` on beta: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ilya recorded it; the compile contract was unchanged.
+
+- Shift 322 — override-policy note on gamma: A wide override here suppressed a risk-level row and was rolled back next shift. Marta recorded it; the compile contract was unchanged.
+
+- Shift 323 — data-quality finding on the west delta feed: A multipart-abort storm briefly doubled its volume with no genuine escalations. Priya recorded it; the compile contract was unchanged.
+
+- Shift 324 — dependency incident touching epsilon: A region-hop burst here was the first case that exercised the wide probe boundary. Rao recorded it; the compile contract was unchanged.
+
+- Shift 325 — correlation study, zeta vs epsilon: A page here traced to benign automation sharing tokens with a real signal. Chen recorded it; the compile contract was unchanged.
+
+- Shift 326 — detector tuning for `range-scan`: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Okafor recorded it; the compile contract was unchanged.
+
+- Shift 327 — on-call handoff, offshore lane: A wide override here suppressed a risk-level row and was rolled back next shift. Silva recorded it; the compile contract was unchanged.
+
+- Shift 328 — change-review debate on iota: A multipart-abort storm briefly doubled its volume with no genuine escalations. Haddad recorded it; the compile contract was unchanged.
+
+- Shift 329 — post-incident follow-up for kappa: A region-hop burst here was the first case that exercised the wide probe boundary. Lindqvist recorded it; the compile contract was unchanged.
+
+- Shift 330 — compaction spot-check on lambda: A page here traced to benign automation sharing tokens with a real signal. Amara recorded it; the compile contract was unchanged.
+
+- Shift 331 — ledger review after a mu escalation: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Boyd recorded it; the compile contract was unchanged.
+
+- Shift 332 — capacity review on nu (north): A wide override here suppressed a risk-level row and was rolled back next shift. Cortes recorded it; the compile contract was unchanged.
+
+- Shift 333 — false-positive audit for `token-reuse` on xi: A multipart-abort storm briefly doubled its volume with no genuine escalations. Devi recorded it; the compile contract was unchanged.
+
+- Shift 334 — override-policy note on omicron: A region-hop burst here was the first case that exercised the wide probe boundary. Engel recorded it; the compile contract was unchanged.
+
+- Shift 335 — data-quality finding on the west pi feed: A page here traced to benign automation sharing tokens with a real signal. Farouk recorded it; the compile contract was unchanged.
+
+- Shift 336 — dependency incident touching rho: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ganesh recorded it; the compile contract was unchanged.
+
+- Shift 337 — correlation study, sigma vs rho: A wide override here suppressed a risk-level row and was rolled back next shift. Ivers recorded it; the compile contract was unchanged.
+
+- Shift 338 — detector tuning for `lifecycle-skip`: A multipart-abort storm briefly doubled its volume with no genuine escalations. Jang recorded it; the compile contract was unchanged.
+
+- Shift 339 — on-call handoff, offshore lane: A region-hop burst here was the first case that exercised the wide probe boundary. Kaur recorded it; the compile contract was unchanged.
+
+- Shift 340 — change-review debate on phi: A page here traced to benign automation sharing tokens with a real signal. Nadia recorded it; the compile contract was unchanged.
+
+- Shift 341 — post-incident follow-up for chi: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ilya recorded it; the compile contract was unchanged.
+
+- Shift 342 — compaction spot-check on psi: A wide override here suppressed a risk-level row and was rolled back next shift. Marta recorded it; the compile contract was unchanged.
+
+- Shift 343 — ledger review after a omega escalation: A multipart-abort storm briefly doubled its volume with no genuine escalations. Priya recorded it; the compile contract was unchanged.
+
+- Shift 344 — capacity review on alpha (north): A region-hop burst here was the first case that exercised the wide probe boundary. Rao recorded it; the compile contract was unchanged.
+
+- Shift 345 — false-positive audit for `unauthenticated-read` on beta: A page here traced to benign automation sharing tokens with a real signal. Chen recorded it; the compile contract was unchanged.
+
+- Shift 346 — override-policy note on gamma: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Okafor recorded it; the compile contract was unchanged.
+
+- Shift 347 — data-quality finding on the west delta feed: A wide override here suppressed a risk-level row and was rolled back next shift. Silva recorded it; the compile contract was unchanged.
+
+- Shift 348 — dependency incident touching epsilon: A multipart-abort storm briefly doubled its volume with no genuine escalations. Haddad recorded it; the compile contract was unchanged.
+
+- Shift 349 — correlation study, zeta vs epsilon: A region-hop burst here was the first case that exercised the wide probe boundary. Lindqvist recorded it; the compile contract was unchanged.
+
+- Shift 350 — detector tuning for `list-enumeration`: A page here traced to benign automation sharing tokens with a real signal. Amara recorded it; the compile contract was unchanged.
+
+- Shift 351 — on-call handoff, offshore lane: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Boyd recorded it; the compile contract was unchanged.
+
+- Shift 352 — change-review debate on iota: A wide override here suppressed a risk-level row and was rolled back next shift. Cortes recorded it; the compile contract was unchanged.
+
+- Shift 353 — post-incident follow-up for kappa: A multipart-abort storm briefly doubled its volume with no genuine escalations. Devi recorded it; the compile contract was unchanged.
+
+- Shift 354 — compaction spot-check on lambda: A region-hop burst here was the first case that exercised the wide probe boundary. Engel recorded it; the compile contract was unchanged.
+
+- Shift 355 — ledger review after a mu escalation: A page here traced to benign automation sharing tokens with a real signal. Farouk recorded it; the compile contract was unchanged.
+
+- Shift 356 — capacity review on nu (north): A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ganesh recorded it; the compile contract was unchanged.
+
+- Shift 357 — false-positive audit for `anon-head` on xi: A wide override here suppressed a risk-level row and was rolled back next shift. Ivers recorded it; the compile contract was unchanged.
+
+- Shift 358 — override-policy note on omicron: A multipart-abort storm briefly doubled its volume with no genuine escalations. Jang recorded it; the compile contract was unchanged.
+
+- Shift 359 — data-quality finding on the west pi feed: A region-hop burst here was the first case that exercised the wide probe boundary. Kaur recorded it; the compile contract was unchanged.
+
+- Shift 360 — dependency incident touching rho: A page here traced to benign automation sharing tokens with a real signal. Nadia recorded it; the compile contract was unchanged.
+
+- Shift 361 — correlation study, sigma vs rho: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ilya recorded it; the compile contract was unchanged.
+
+- Shift 362 — detector tuning for `batch-replay`: A wide override here suppressed a risk-level row and was rolled back next shift. Marta recorded it; the compile contract was unchanged.
+
+- Shift 363 — on-call handoff, offshore lane: A multipart-abort storm briefly doubled its volume with no genuine escalations. Priya recorded it; the compile contract was unchanged.
+
+- Shift 364 — change-review debate on phi: A region-hop burst here was the first case that exercised the wide probe boundary. Rao recorded it; the compile contract was unchanged.
+
+- Shift 365 — post-incident follow-up for chi: A page here traced to benign automation sharing tokens with a real signal. Chen recorded it; the compile contract was unchanged.
+
+- Shift 366 — compaction spot-check on psi: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Okafor recorded it; the compile contract was unchanged.
+
+- Shift 367 — ledger review after a omega escalation: A wide override here suppressed a risk-level row and was rolled back next shift. Silva recorded it; the compile contract was unchanged.
+
+- Shift 368 — capacity review on alpha (north): A multipart-abort storm briefly doubled its volume with no genuine escalations. Haddad recorded it; the compile contract was unchanged.
+
+- Shift 369 — false-positive audit for `acl-widen` on beta: A region-hop burst here was the first case that exercised the wide probe boundary. Lindqvist recorded it; the compile contract was unchanged.
+
+- Shift 370 — override-policy note on gamma: A page here traced to benign automation sharing tokens with a real signal. Amara recorded it; the compile contract was unchanged.
+
+- Shift 371 — data-quality finding on the west delta feed: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Boyd recorded it; the compile contract was unchanged.
+
+- Shift 372 — dependency incident touching epsilon: A wide override here suppressed a risk-level row and was rolled back next shift. Cortes recorded it; the compile contract was unchanged.
+
+- Shift 373 — correlation study, zeta vs epsilon: A multipart-abort storm briefly doubled its volume with no genuine escalations. Devi recorded it; the compile contract was unchanged.
+
+- Shift 374 — detector tuning for `range-scan`: A region-hop burst here was the first case that exercised the wide probe boundary. Engel recorded it; the compile contract was unchanged.
+
+- Shift 375 — on-call handoff, offshore lane: A page here traced to benign automation sharing tokens with a real signal. Farouk recorded it; the compile contract was unchanged.
+
+- Shift 376 — change-review debate on iota: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ganesh recorded it; the compile contract was unchanged.
+
+- Shift 377 — post-incident follow-up for kappa: A wide override here suppressed a risk-level row and was rolled back next shift. Ivers recorded it; the compile contract was unchanged.
+
+- Shift 378 — compaction spot-check on lambda: A multipart-abort storm briefly doubled its volume with no genuine escalations. Jang recorded it; the compile contract was unchanged.
+
+- Shift 379 — ledger review after a mu escalation: A region-hop burst here was the first case that exercised the wide probe boundary. Kaur recorded it; the compile contract was unchanged.
+
+- Shift 380 — capacity review on nu (north): A page here traced to benign automation sharing tokens with a real signal. Nadia recorded it; the compile contract was unchanged.
+
+- Shift 381 — false-positive audit for `token-reuse` on xi: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ilya recorded it; the compile contract was unchanged.
+
+- Shift 382 — override-policy note on omicron: A wide override here suppressed a risk-level row and was rolled back next shift. Marta recorded it; the compile contract was unchanged.
+
+- Shift 383 — data-quality finding on the west pi feed: A multipart-abort storm briefly doubled its volume with no genuine escalations. Priya recorded it; the compile contract was unchanged.
+
+- Shift 384 — dependency incident touching rho: A region-hop burst here was the first case that exercised the wide probe boundary. Rao recorded it; the compile contract was unchanged.
+
+- Shift 385 — correlation study, sigma vs rho: A page here traced to benign automation sharing tokens with a real signal. Chen recorded it; the compile contract was unchanged.
+
+- Shift 386 — detector tuning for `lifecycle-skip`: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Okafor recorded it; the compile contract was unchanged.
+
+- Shift 387 — on-call handoff, offshore lane: A wide override here suppressed a risk-level row and was rolled back next shift. Silva recorded it; the compile contract was unchanged.
+
+- Shift 388 — change-review debate on phi: A multipart-abort storm briefly doubled its volume with no genuine escalations. Haddad recorded it; the compile contract was unchanged.
+
+- Shift 389 — post-incident follow-up for chi: A region-hop burst here was the first case that exercised the wide probe boundary. Lindqvist recorded it; the compile contract was unchanged.
+
+- Shift 390 — compaction spot-check on psi: A page here traced to benign automation sharing tokens with a real signal. Amara recorded it; the compile contract was unchanged.
+
+- Shift 391 — ledger review after a omega escalation: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Boyd recorded it; the compile contract was unchanged.
+
+- Shift 392 — capacity review on alpha (north): A wide override here suppressed a risk-level row and was rolled back next shift. Cortes recorded it; the compile contract was unchanged.
+
+- Shift 393 — false-positive audit for `unauthenticated-read` on beta: A multipart-abort storm briefly doubled its volume with no genuine escalations. Devi recorded it; the compile contract was unchanged.
+
+- Shift 394 — override-policy note on gamma: A region-hop burst here was the first case that exercised the wide probe boundary. Engel recorded it; the compile contract was unchanged.
+
+- Shift 395 — data-quality finding on the west delta feed: A page here traced to benign automation sharing tokens with a real signal. Farouk recorded it; the compile contract was unchanged.
+
+- Shift 396 — dependency incident touching epsilon: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ganesh recorded it; the compile contract was unchanged.
+
+- Shift 397 — correlation study, zeta vs epsilon: A wide override here suppressed a risk-level row and was rolled back next shift. Ivers recorded it; the compile contract was unchanged.
+
+- Shift 398 — detector tuning for `list-enumeration`: A multipart-abort storm briefly doubled its volume with no genuine escalations. Jang recorded it; the compile contract was unchanged.
+
+- Shift 399 — on-call handoff, offshore lane: A region-hop burst here was the first case that exercised the wide probe boundary. Kaur recorded it; the compile contract was unchanged.
+
+- Shift 400 — change-review debate on iota: A page here traced to benign automation sharing tokens with a real signal. Nadia recorded it; the compile contract was unchanged.
+
+- Shift 401 — post-incident follow-up for kappa: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ilya recorded it; the compile contract was unchanged.
+
+- Shift 402 — compaction spot-check on lambda: A wide override here suppressed a risk-level row and was rolled back next shift. Marta recorded it; the compile contract was unchanged.
+
+- Shift 403 — ledger review after a mu escalation: A multipart-abort storm briefly doubled its volume with no genuine escalations. Priya recorded it; the compile contract was unchanged.
+
+- Shift 404 — capacity review on nu (north): A region-hop burst here was the first case that exercised the wide probe boundary. Rao recorded it; the compile contract was unchanged.
+
+- Shift 405 — false-positive audit for `anon-head` on xi: A page here traced to benign automation sharing tokens with a real signal. Chen recorded it; the compile contract was unchanged.
+
+- Shift 406 — override-policy note on omicron: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Okafor recorded it; the compile contract was unchanged.
+
+- Shift 407 — data-quality finding on the west pi feed: A wide override here suppressed a risk-level row and was rolled back next shift. Silva recorded it; the compile contract was unchanged.
+
+- Shift 408 — dependency incident touching rho: A multipart-abort storm briefly doubled its volume with no genuine escalations. Haddad recorded it; the compile contract was unchanged.
+
+- Shift 409 — correlation study, sigma vs rho: A region-hop burst here was the first case that exercised the wide probe boundary. Lindqvist recorded it; the compile contract was unchanged.
+
+- Shift 410 — detector tuning for `batch-replay`: A page here traced to benign automation sharing tokens with a real signal. Amara recorded it; the compile contract was unchanged.
+
+- Shift 411 — on-call handoff, offshore lane: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Boyd recorded it; the compile contract was unchanged.
+
+- Shift 412 — change-review debate on phi: A wide override here suppressed a risk-level row and was rolled back next shift. Cortes recorded it; the compile contract was unchanged.
+
+- Shift 413 — post-incident follow-up for chi: A multipart-abort storm briefly doubled its volume with no genuine escalations. Devi recorded it; the compile contract was unchanged.
+
+- Shift 414 — compaction spot-check on psi: A region-hop burst here was the first case that exercised the wide probe boundary. Engel recorded it; the compile contract was unchanged.
+
+- Shift 415 — ledger review after a omega escalation: A page here traced to benign automation sharing tokens with a real signal. Farouk recorded it; the compile contract was unchanged.
+
+- Shift 416 — capacity review on alpha (north): A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ganesh recorded it; the compile contract was unchanged.
+
+- Shift 417 — false-positive audit for `acl-widen` on beta: A wide override here suppressed a risk-level row and was rolled back next shift. Ivers recorded it; the compile contract was unchanged.
+
+- Shift 418 — override-policy note on gamma: A multipart-abort storm briefly doubled its volume with no genuine escalations. Jang recorded it; the compile contract was unchanged.
+
+- Shift 419 — data-quality finding on the west delta feed: A region-hop burst here was the first case that exercised the wide probe boundary. Kaur recorded it; the compile contract was unchanged.
+
+- Shift 420 — dependency incident touching epsilon: A page here traced to benign automation sharing tokens with a real signal. Nadia recorded it; the compile contract was unchanged.
+
+- Shift 421 — correlation study, zeta vs epsilon: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ilya recorded it; the compile contract was unchanged.
+
+- Shift 422 — detector tuning for `range-scan`: A wide override here suppressed a risk-level row and was rolled back next shift. Marta recorded it; the compile contract was unchanged.
+
+- Shift 423 — on-call handoff, offshore lane: A multipart-abort storm briefly doubled its volume with no genuine escalations. Priya recorded it; the compile contract was unchanged.
+
+- Shift 424 — change-review debate on iota: A region-hop burst here was the first case that exercised the wide probe boundary. Rao recorded it; the compile contract was unchanged.
+
+- Shift 425 — post-incident follow-up for kappa: A page here traced to benign automation sharing tokens with a real signal. Chen recorded it; the compile contract was unchanged.
+
+- Shift 426 — compaction spot-check on lambda: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Okafor recorded it; the compile contract was unchanged.
+
+- Shift 427 — ledger review after a mu escalation: A wide override here suppressed a risk-level row and was rolled back next shift. Silva recorded it; the compile contract was unchanged.
+
+- Shift 428 — capacity review on nu (north): A multipart-abort storm briefly doubled its volume with no genuine escalations. Haddad recorded it; the compile contract was unchanged.
+
+- Shift 429 — false-positive audit for `token-reuse` on xi: A region-hop burst here was the first case that exercised the wide probe boundary. Lindqvist recorded it; the compile contract was unchanged.
+
+- Shift 430 — override-policy note on omicron: A page here traced to benign automation sharing tokens with a real signal. Amara recorded it; the compile contract was unchanged.
+
+- Shift 431 — data-quality finding on the west pi feed: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Boyd recorded it; the compile contract was unchanged.
+
+- Shift 432 — dependency incident touching rho: A wide override here suppressed a risk-level row and was rolled back next shift. Cortes recorded it; the compile contract was unchanged.
+
+- Shift 433 — correlation study, sigma vs rho: A multipart-abort storm briefly doubled its volume with no genuine escalations. Devi recorded it; the compile contract was unchanged.
+
+- Shift 434 — detector tuning for `lifecycle-skip`: A region-hop burst here was the first case that exercised the wide probe boundary. Engel recorded it; the compile contract was unchanged.
+
+- Shift 435 — on-call handoff, offshore lane: A page here traced to benign automation sharing tokens with a real signal. Farouk recorded it; the compile contract was unchanged.
+
+- Shift 436 — change-review debate on phi: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ganesh recorded it; the compile contract was unchanged.
+
+- Shift 437 — post-incident follow-up for chi: A wide override here suppressed a risk-level row and was rolled back next shift. Ivers recorded it; the compile contract was unchanged.
+
+- Shift 438 — compaction spot-check on psi: A multipart-abort storm briefly doubled its volume with no genuine escalations. Jang recorded it; the compile contract was unchanged.
+
+- Shift 439 — ledger review after a omega escalation: A region-hop burst here was the first case that exercised the wide probe boundary. Kaur recorded it; the compile contract was unchanged.
+
+- Shift 440 — capacity review on alpha (north): A page here traced to benign automation sharing tokens with a real signal. Nadia recorded it; the compile contract was unchanged.
+
+- Shift 441 — false-positive audit for `unauthenticated-read` on beta: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ilya recorded it; the compile contract was unchanged.
+
+- Shift 442 — override-policy note on gamma: A wide override here suppressed a risk-level row and was rolled back next shift. Marta recorded it; the compile contract was unchanged.
+
+- Shift 443 — data-quality finding on the west delta feed: A multipart-abort storm briefly doubled its volume with no genuine escalations. Priya recorded it; the compile contract was unchanged.
+
+- Shift 444 — dependency incident touching epsilon: A region-hop burst here was the first case that exercised the wide probe boundary. Rao recorded it; the compile contract was unchanged.
+
+- Shift 445 — correlation study, zeta vs epsilon: A page here traced to benign automation sharing tokens with a real signal. Chen recorded it; the compile contract was unchanged.
+
+- Shift 446 — detector tuning for `list-enumeration`: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Okafor recorded it; the compile contract was unchanged.
+
+- Shift 447 — on-call handoff, offshore lane: A wide override here suppressed a risk-level row and was rolled back next shift. Silva recorded it; the compile contract was unchanged.
+
+- Shift 448 — change-review debate on iota: A multipart-abort storm briefly doubled its volume with no genuine escalations. Haddad recorded it; the compile contract was unchanged.
+
+- Shift 449 — post-incident follow-up for kappa: A region-hop burst here was the first case that exercised the wide probe boundary. Lindqvist recorded it; the compile contract was unchanged.
+
+- Shift 450 — compaction spot-check on lambda: A page here traced to benign automation sharing tokens with a real signal. Amara recorded it; the compile contract was unchanged.
+
+- Shift 451 — ledger review after a mu escalation: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Boyd recorded it; the compile contract was unchanged.
+
+- Shift 452 — capacity review on nu (north): A wide override here suppressed a risk-level row and was rolled back next shift. Cortes recorded it; the compile contract was unchanged.
+
+- Shift 453 — false-positive audit for `anon-head` on xi: A multipart-abort storm briefly doubled its volume with no genuine escalations. Devi recorded it; the compile contract was unchanged.
+
+- Shift 454 — override-policy note on omicron: A region-hop burst here was the first case that exercised the wide probe boundary. Engel recorded it; the compile contract was unchanged.
+
+- Shift 455 — data-quality finding on the west pi feed: A page here traced to benign automation sharing tokens with a real signal. Farouk recorded it; the compile contract was unchanged.
+
+- Shift 456 — dependency incident touching rho: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ganesh recorded it; the compile contract was unchanged.
+
+- Shift 457 — correlation study, sigma vs rho: A wide override here suppressed a risk-level row and was rolled back next shift. Ivers recorded it; the compile contract was unchanged.
+
+- Shift 458 — detector tuning for `batch-replay`: A multipart-abort storm briefly doubled its volume with no genuine escalations. Jang recorded it; the compile contract was unchanged.
+
+- Shift 459 — on-call handoff, offshore lane: A region-hop burst here was the first case that exercised the wide probe boundary. Kaur recorded it; the compile contract was unchanged.
+
+- Shift 460 — change-review debate on phi: A page here traced to benign automation sharing tokens with a real signal. Nadia recorded it; the compile contract was unchanged.
+
+- Shift 461 — post-incident follow-up for chi: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ilya recorded it; the compile contract was unchanged.
+
+- Shift 462 — compaction spot-check on psi: A wide override here suppressed a risk-level row and was rolled back next shift. Marta recorded it; the compile contract was unchanged.
+
+- Shift 463 — ledger review after a omega escalation: A multipart-abort storm briefly doubled its volume with no genuine escalations. Priya recorded it; the compile contract was unchanged.
+
+- Shift 464 — capacity review on alpha (north): A region-hop burst here was the first case that exercised the wide probe boundary. Rao recorded it; the compile contract was unchanged.
+
+- Shift 465 — false-positive audit for `acl-widen` on beta: A page here traced to benign automation sharing tokens with a real signal. Chen recorded it; the compile contract was unchanged.
+
+- Shift 466 — override-policy note on gamma: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Okafor recorded it; the compile contract was unchanged.
+
+- Shift 467 — data-quality finding on the west delta feed: A wide override here suppressed a risk-level row and was rolled back next shift. Silva recorded it; the compile contract was unchanged.
+
+- Shift 468 — dependency incident touching epsilon: A multipart-abort storm briefly doubled its volume with no genuine escalations. Haddad recorded it; the compile contract was unchanged.
+
+- Shift 469 — correlation study, zeta vs epsilon: A region-hop burst here was the first case that exercised the wide probe boundary. Lindqvist recorded it; the compile contract was unchanged.
+
+- Shift 470 — detector tuning for `range-scan`: A page here traced to benign automation sharing tokens with a real signal. Amara recorded it; the compile contract was unchanged.
+
+- Shift 471 — on-call handoff, offshore lane: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Boyd recorded it; the compile contract was unchanged.
+
+- Shift 472 — change-review debate on iota: A wide override here suppressed a risk-level row and was rolled back next shift. Cortes recorded it; the compile contract was unchanged.
+
+- Shift 473 — post-incident follow-up for kappa: A multipart-abort storm briefly doubled its volume with no genuine escalations. Devi recorded it; the compile contract was unchanged.
+
+- Shift 474 — compaction spot-check on lambda: A region-hop burst here was the first case that exercised the wide probe boundary. Engel recorded it; the compile contract was unchanged.
+
+- Shift 475 — ledger review after a mu escalation: A page here traced to benign automation sharing tokens with a real signal. Farouk recorded it; the compile contract was unchanged.
+
+- Shift 476 — capacity review on nu (north): A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ganesh recorded it; the compile contract was unchanged.
+
+- Shift 477 — false-positive audit for `token-reuse` on xi: A wide override here suppressed a risk-level row and was rolled back next shift. Ivers recorded it; the compile contract was unchanged.
+
+- Shift 478 — override-policy note on omicron: A multipart-abort storm briefly doubled its volume with no genuine escalations. Jang recorded it; the compile contract was unchanged.
+
+- Shift 479 — data-quality finding on the west pi feed: A region-hop burst here was the first case that exercised the wide probe boundary. Kaur recorded it; the compile contract was unchanged.
+
+- Shift 480 — dependency incident touching rho: A page here traced to benign automation sharing tokens with a real signal. Nadia recorded it; the compile contract was unchanged.
+
+- Shift 481 — correlation study, sigma vs rho: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ilya recorded it; the compile contract was unchanged.
+
+- Shift 482 — detector tuning for `lifecycle-skip`: A wide override here suppressed a risk-level row and was rolled back next shift. Marta recorded it; the compile contract was unchanged.
+
+- Shift 483 — on-call handoff, offshore lane: A multipart-abort storm briefly doubled its volume with no genuine escalations. Priya recorded it; the compile contract was unchanged.
+
+- Shift 484 — change-review debate on phi: A region-hop burst here was the first case that exercised the wide probe boundary. Rao recorded it; the compile contract was unchanged.
+
+- Shift 485 — post-incident follow-up for chi: A page here traced to benign automation sharing tokens with a real signal. Chen recorded it; the compile contract was unchanged.
+
+- Shift 486 — compaction spot-check on psi: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Okafor recorded it; the compile contract was unchanged.
+
+- Shift 487 — ledger review after a omega escalation: A wide override here suppressed a risk-level row and was rolled back next shift. Silva recorded it; the compile contract was unchanged.
+
+- Shift 488 — capacity review on alpha (north): A multipart-abort storm briefly doubled its volume with no genuine escalations. Haddad recorded it; the compile contract was unchanged.
+
+- Shift 489 — false-positive audit for `unauthenticated-read` on beta: A region-hop burst here was the first case that exercised the wide probe boundary. Lindqvist recorded it; the compile contract was unchanged.
+
+- Shift 490 — override-policy note on gamma: A page here traced to benign automation sharing tokens with a real signal. Amara recorded it; the compile contract was unchanged.
+
+- Shift 491 — data-quality finding on the west delta feed: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Boyd recorded it; the compile contract was unchanged.
+
+- Shift 492 — dependency incident touching epsilon: A wide override here suppressed a risk-level row and was rolled back next shift. Cortes recorded it; the compile contract was unchanged.
+
+- Shift 493 — correlation study, zeta vs epsilon: A multipart-abort storm briefly doubled its volume with no genuine escalations. Devi recorded it; the compile contract was unchanged.
+
+- Shift 494 — detector tuning for `list-enumeration`: A region-hop burst here was the first case that exercised the wide probe boundary. Engel recorded it; the compile contract was unchanged.
+
+- Shift 495 — on-call handoff, offshore lane: A page here traced to benign automation sharing tokens with a real signal. Farouk recorded it; the compile contract was unchanged.
+
+- Shift 496 — change-review debate on iota: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ganesh recorded it; the compile contract was unchanged.
+
+- Shift 497 — post-incident follow-up for kappa: A wide override here suppressed a risk-level row and was rolled back next shift. Ivers recorded it; the compile contract was unchanged.
+
+- Shift 498 — compaction spot-check on lambda: A multipart-abort storm briefly doubled its volume with no genuine escalations. Jang recorded it; the compile contract was unchanged.
+
+- Shift 499 — ledger review after a mu escalation: A region-hop burst here was the first case that exercised the wide probe boundary. Kaur recorded it; the compile contract was unchanged.
+
+- Shift 500 — capacity review on nu (north): A page here traced to benign automation sharing tokens with a real signal. Nadia recorded it; the compile contract was unchanged.
+
+- Shift 501 — false-positive audit for `anon-head` on xi: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ilya recorded it; the compile contract was unchanged.
+
+- Shift 502 — override-policy note on omicron: A wide override here suppressed a risk-level row and was rolled back next shift. Marta recorded it; the compile contract was unchanged.
+
+- Shift 503 — data-quality finding on the west pi feed: A multipart-abort storm briefly doubled its volume with no genuine escalations. Priya recorded it; the compile contract was unchanged.
+
+- Shift 504 — dependency incident touching rho: A region-hop burst here was the first case that exercised the wide probe boundary. Rao recorded it; the compile contract was unchanged.
+
+- Shift 505 — correlation study, sigma vs rho: A page here traced to benign automation sharing tokens with a real signal. Chen recorded it; the compile contract was unchanged.
+
+- Shift 506 — detector tuning for `batch-replay`: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Okafor recorded it; the compile contract was unchanged.
+
+- Shift 507 — on-call handoff, offshore lane: A wide override here suppressed a risk-level row and was rolled back next shift. Silva recorded it; the compile contract was unchanged.
+
+- Shift 508 — change-review debate on phi: A multipart-abort storm briefly doubled its volume with no genuine escalations. Haddad recorded it; the compile contract was unchanged.
+
+- Shift 509 — post-incident follow-up for chi: A region-hop burst here was the first case that exercised the wide probe boundary. Lindqvist recorded it; the compile contract was unchanged.
+
+- Shift 510 — compaction spot-check on psi: A page here traced to benign automation sharing tokens with a real signal. Amara recorded it; the compile contract was unchanged.
+
+- Shift 511 — ledger review after a omega escalation: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Boyd recorded it; the compile contract was unchanged.
+
+- Shift 512 — capacity review on alpha (north): A wide override here suppressed a risk-level row and was rolled back next shift. Cortes recorded it; the compile contract was unchanged.
+
+- Shift 513 — false-positive audit for `acl-widen` on beta: A multipart-abort storm briefly doubled its volume with no genuine escalations. Devi recorded it; the compile contract was unchanged.
+
+- Shift 514 — override-policy note on gamma: A region-hop burst here was the first case that exercised the wide probe boundary. Engel recorded it; the compile contract was unchanged.
+
+- Shift 515 — data-quality finding on the west delta feed: A page here traced to benign automation sharing tokens with a real signal. Farouk recorded it; the compile contract was unchanged.
+
+- Shift 516 — dependency incident touching epsilon: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ganesh recorded it; the compile contract was unchanged.
+
+- Shift 517 — correlation study, zeta vs epsilon: A wide override here suppressed a risk-level row and was rolled back next shift. Ivers recorded it; the compile contract was unchanged.
+
+- Shift 518 — detector tuning for `range-scan`: A multipart-abort storm briefly doubled its volume with no genuine escalations. Jang recorded it; the compile contract was unchanged.
+
+- Shift 519 — on-call handoff, offshore lane: A region-hop burst here was the first case that exercised the wide probe boundary. Kaur recorded it; the compile contract was unchanged.
+
+- Shift 520 — change-review debate on iota: A page here traced to benign automation sharing tokens with a real signal. Nadia recorded it; the compile contract was unchanged.
+
+- Shift 521 — post-incident follow-up for kappa: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ilya recorded it; the compile contract was unchanged.
+
+- Shift 522 — compaction spot-check on lambda: A wide override here suppressed a risk-level row and was rolled back next shift. Marta recorded it; the compile contract was unchanged.
+
+- Shift 523 — ledger review after a mu escalation: A multipart-abort storm briefly doubled its volume with no genuine escalations. Priya recorded it; the compile contract was unchanged.
+
+- Shift 524 — capacity review on nu (north): A region-hop burst here was the first case that exercised the wide probe boundary. Rao recorded it; the compile contract was unchanged.
+
+- Shift 525 — false-positive audit for `token-reuse` on xi: A page here traced to benign automation sharing tokens with a real signal. Chen recorded it; the compile contract was unchanged.
+
+- Shift 526 — override-policy note on omicron: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Okafor recorded it; the compile contract was unchanged.
+
+- Shift 527 — data-quality finding on the west pi feed: A wide override here suppressed a risk-level row and was rolled back next shift. Silva recorded it; the compile contract was unchanged.
+
+- Shift 528 — dependency incident touching rho: A multipart-abort storm briefly doubled its volume with no genuine escalations. Haddad recorded it; the compile contract was unchanged.
+
+- Shift 529 — correlation study, sigma vs rho: A region-hop burst here was the first case that exercised the wide probe boundary. Lindqvist recorded it; the compile contract was unchanged.
+
+- Shift 530 — detector tuning for `lifecycle-skip`: A page here traced to benign automation sharing tokens with a real signal. Amara recorded it; the compile contract was unchanged.
+
+- Shift 531 — on-call handoff, offshore lane: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Boyd recorded it; the compile contract was unchanged.
+
+- Shift 532 — change-review debate on phi: A wide override here suppressed a risk-level row and was rolled back next shift. Cortes recorded it; the compile contract was unchanged.
+
+- Shift 533 — post-incident follow-up for chi: A multipart-abort storm briefly doubled its volume with no genuine escalations. Devi recorded it; the compile contract was unchanged.
+
+- Shift 534 — compaction spot-check on psi: A region-hop burst here was the first case that exercised the wide probe boundary. Engel recorded it; the compile contract was unchanged.
+
+- Shift 535 — ledger review after a omega escalation: A page here traced to benign automation sharing tokens with a real signal. Farouk recorded it; the compile contract was unchanged.
+
+- Shift 536 — capacity review on alpha (north): A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ganesh recorded it; the compile contract was unchanged.
+
+- Shift 537 — false-positive audit for `unauthenticated-read` on beta: A wide override here suppressed a risk-level row and was rolled back next shift. Ivers recorded it; the compile contract was unchanged.
+
+- Shift 538 — override-policy note on gamma: A multipart-abort storm briefly doubled its volume with no genuine escalations. Jang recorded it; the compile contract was unchanged.
+
+- Shift 539 — data-quality finding on the west delta feed: A region-hop burst here was the first case that exercised the wide probe boundary. Kaur recorded it; the compile contract was unchanged.
+
+- Shift 540 — dependency incident touching epsilon: A page here traced to benign automation sharing tokens with a real signal. Nadia recorded it; the compile contract was unchanged.
+
+- Shift 541 — correlation study, zeta vs epsilon: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ilya recorded it; the compile contract was unchanged.
+
+- Shift 542 — detector tuning for `list-enumeration`: A wide override here suppressed a risk-level row and was rolled back next shift. Marta recorded it; the compile contract was unchanged.
+
+- Shift 543 — on-call handoff, offshore lane: A multipart-abort storm briefly doubled its volume with no genuine escalations. Priya recorded it; the compile contract was unchanged.
+
+- Shift 544 — change-review debate on iota: A region-hop burst here was the first case that exercised the wide probe boundary. Rao recorded it; the compile contract was unchanged.
+
+- Shift 545 — post-incident follow-up for kappa: A page here traced to benign automation sharing tokens with a real signal. Chen recorded it; the compile contract was unchanged.
+
+- Shift 546 — compaction spot-check on lambda: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Okafor recorded it; the compile contract was unchanged.
+
+- Shift 547 — ledger review after a mu escalation: A wide override here suppressed a risk-level row and was rolled back next shift. Silva recorded it; the compile contract was unchanged.
+
+- Shift 548 — capacity review on nu (north): A multipart-abort storm briefly doubled its volume with no genuine escalations. Haddad recorded it; the compile contract was unchanged.
+
+- Shift 549 — false-positive audit for `anon-head` on xi: A region-hop burst here was the first case that exercised the wide probe boundary. Lindqvist recorded it; the compile contract was unchanged.
+
+- Shift 550 — override-policy note on omicron: A page here traced to benign automation sharing tokens with a real signal. Amara recorded it; the compile contract was unchanged.
+
+- Shift 551 — data-quality finding on the west pi feed: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Boyd recorded it; the compile contract was unchanged.
+
+- Shift 552 — dependency incident touching rho: A wide override here suppressed a risk-level row and was rolled back next shift. Cortes recorded it; the compile contract was unchanged.
+
+- Shift 553 — correlation study, sigma vs rho: A multipart-abort storm briefly doubled its volume with no genuine escalations. Devi recorded it; the compile contract was unchanged.
+
+- Shift 554 — detector tuning for `batch-replay`: A region-hop burst here was the first case that exercised the wide probe boundary. Engel recorded it; the compile contract was unchanged.
+
+- Shift 555 — on-call handoff, offshore lane: A page here traced to benign automation sharing tokens with a real signal. Farouk recorded it; the compile contract was unchanged.
+
+- Shift 556 — change-review debate on phi: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ganesh recorded it; the compile contract was unchanged.
+
+- Shift 557 — post-incident follow-up for chi: A wide override here suppressed a risk-level row and was rolled back next shift. Ivers recorded it; the compile contract was unchanged.
+
+- Shift 558 — compaction spot-check on psi: A multipart-abort storm briefly doubled its volume with no genuine escalations. Jang recorded it; the compile contract was unchanged.
+
+- Shift 559 — ledger review after a omega escalation: A region-hop burst here was the first case that exercised the wide probe boundary. Kaur recorded it; the compile contract was unchanged.
+
+- Shift 560 — capacity review on alpha (north): A page here traced to benign automation sharing tokens with a real signal. Nadia recorded it; the compile contract was unchanged.
+
+- Shift 561 — false-positive audit for `acl-widen` on beta: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ilya recorded it; the compile contract was unchanged.
+
+- Shift 562 — override-policy note on gamma: A wide override here suppressed a risk-level row and was rolled back next shift. Marta recorded it; the compile contract was unchanged.
+
+- Shift 563 — data-quality finding on the west delta feed: A multipart-abort storm briefly doubled its volume with no genuine escalations. Priya recorded it; the compile contract was unchanged.
+
+- Shift 564 — dependency incident touching epsilon: A region-hop burst here was the first case that exercised the wide probe boundary. Rao recorded it; the compile contract was unchanged.
+
+- Shift 565 — correlation study, zeta vs epsilon: A page here traced to benign automation sharing tokens with a real signal. Chen recorded it; the compile contract was unchanged.
+
+- Shift 566 — detector tuning for `range-scan`: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Okafor recorded it; the compile contract was unchanged.
+
+- Shift 567 — on-call handoff, offshore lane: A wide override here suppressed a risk-level row and was rolled back next shift. Silva recorded it; the compile contract was unchanged.
+
+- Shift 568 — change-review debate on iota: A multipart-abort storm briefly doubled its volume with no genuine escalations. Haddad recorded it; the compile contract was unchanged.
+
+- Shift 569 — post-incident follow-up for kappa: A region-hop burst here was the first case that exercised the wide probe boundary. Lindqvist recorded it; the compile contract was unchanged.
+
+- Shift 570 — compaction spot-check on lambda: A page here traced to benign automation sharing tokens with a real signal. Amara recorded it; the compile contract was unchanged.
+
+- Shift 571 — ledger review after a mu escalation: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Boyd recorded it; the compile contract was unchanged.
+
+- Shift 572 — capacity review on nu (north): A wide override here suppressed a risk-level row and was rolled back next shift. Cortes recorded it; the compile contract was unchanged.
+
+- Shift 573 — false-positive audit for `token-reuse` on xi: A multipart-abort storm briefly doubled its volume with no genuine escalations. Devi recorded it; the compile contract was unchanged.
+
+- Shift 574 — override-policy note on omicron: A region-hop burst here was the first case that exercised the wide probe boundary. Engel recorded it; the compile contract was unchanged.
+
+- Shift 575 — data-quality finding on the west pi feed: A page here traced to benign automation sharing tokens with a real signal. Farouk recorded it; the compile contract was unchanged.
+
+- Shift 576 — dependency incident touching rho: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ganesh recorded it; the compile contract was unchanged.
+
+- Shift 577 — correlation study, sigma vs rho: A wide override here suppressed a risk-level row and was rolled back next shift. Ivers recorded it; the compile contract was unchanged.
+
+- Shift 578 — detector tuning for `lifecycle-skip`: A multipart-abort storm briefly doubled its volume with no genuine escalations. Jang recorded it; the compile contract was unchanged.
+
+- Shift 579 — on-call handoff, offshore lane: A region-hop burst here was the first case that exercised the wide probe boundary. Kaur recorded it; the compile contract was unchanged.
+
+- Shift 580 — change-review debate on phi: A page here traced to benign automation sharing tokens with a real signal. Nadia recorded it; the compile contract was unchanged.
+
+- Shift 581 — post-incident follow-up for chi: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ilya recorded it; the compile contract was unchanged.
+
+- Shift 582 — compaction spot-check on psi: A wide override here suppressed a risk-level row and was rolled back next shift. Marta recorded it; the compile contract was unchanged.
+
+- Shift 583 — ledger review after a omega escalation: A multipart-abort storm briefly doubled its volume with no genuine escalations. Priya recorded it; the compile contract was unchanged.
+
+- Shift 584 — capacity review on alpha (north): A region-hop burst here was the first case that exercised the wide probe boundary. Rao recorded it; the compile contract was unchanged.
+
+- Shift 585 — false-positive audit for `unauthenticated-read` on beta: A page here traced to benign automation sharing tokens with a real signal. Chen recorded it; the compile contract was unchanged.
+
+- Shift 586 — override-policy note on gamma: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Okafor recorded it; the compile contract was unchanged.
+
+- Shift 587 — data-quality finding on the west delta feed: A wide override here suppressed a risk-level row and was rolled back next shift. Silva recorded it; the compile contract was unchanged.
+
+- Shift 588 — dependency incident touching epsilon: A multipart-abort storm briefly doubled its volume with no genuine escalations. Haddad recorded it; the compile contract was unchanged.
+
+- Shift 589 — correlation study, zeta vs epsilon: A region-hop burst here was the first case that exercised the wide probe boundary. Lindqvist recorded it; the compile contract was unchanged.
+
+- Shift 590 — detector tuning for `list-enumeration`: A page here traced to benign automation sharing tokens with a real signal. Amara recorded it; the compile contract was unchanged.
+
+- Shift 591 — on-call handoff, offshore lane: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Boyd recorded it; the compile contract was unchanged.
+
+- Shift 592 — change-review debate on iota: A wide override here suppressed a risk-level row and was rolled back next shift. Cortes recorded it; the compile contract was unchanged.
+
+- Shift 593 — post-incident follow-up for kappa: A multipart-abort storm briefly doubled its volume with no genuine escalations. Devi recorded it; the compile contract was unchanged.
+
+- Shift 594 — compaction spot-check on lambda: A region-hop burst here was the first case that exercised the wide probe boundary. Engel recorded it; the compile contract was unchanged.
+
+- Shift 595 — ledger review after a mu escalation: A page here traced to benign automation sharing tokens with a real signal. Farouk recorded it; the compile contract was unchanged.
+
+- Shift 596 — capacity review on nu (north): A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ganesh recorded it; the compile contract was unchanged.
+
+- Shift 597 — false-positive audit for `anon-head` on xi: A wide override here suppressed a risk-level row and was rolled back next shift. Ivers recorded it; the compile contract was unchanged.
+
+- Shift 598 — override-policy note on omicron: A multipart-abort storm briefly doubled its volume with no genuine escalations. Jang recorded it; the compile contract was unchanged.
+
+- Shift 599 — data-quality finding on the west pi feed: A region-hop burst here was the first case that exercised the wide probe boundary. Kaur recorded it; the compile contract was unchanged.
+
+- Shift 600 — dependency incident touching rho: A page here traced to benign automation sharing tokens with a real signal. Nadia recorded it; the compile contract was unchanged.
+
+- Shift 601 — correlation study, sigma vs rho: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ilya recorded it; the compile contract was unchanged.
+
+- Shift 602 — detector tuning for `batch-replay`: A wide override here suppressed a risk-level row and was rolled back next shift. Marta recorded it; the compile contract was unchanged.
+
+- Shift 603 — on-call handoff, offshore lane: A multipart-abort storm briefly doubled its volume with no genuine escalations. Priya recorded it; the compile contract was unchanged.
+
+- Shift 604 — change-review debate on phi: A region-hop burst here was the first case that exercised the wide probe boundary. Rao recorded it; the compile contract was unchanged.
+
+- Shift 605 — post-incident follow-up for chi: A page here traced to benign automation sharing tokens with a real signal. Chen recorded it; the compile contract was unchanged.
+
+- Shift 606 — compaction spot-check on psi: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Okafor recorded it; the compile contract was unchanged.
+
+- Shift 607 — ledger review after a omega escalation: A wide override here suppressed a risk-level row and was rolled back next shift. Silva recorded it; the compile contract was unchanged.
+
+- Shift 608 — capacity review on alpha (north): A multipart-abort storm briefly doubled its volume with no genuine escalations. Haddad recorded it; the compile contract was unchanged.
+
+- Shift 609 — false-positive audit for `acl-widen` on beta: A region-hop burst here was the first case that exercised the wide probe boundary. Lindqvist recorded it; the compile contract was unchanged.
+
+- Shift 610 — override-policy note on gamma: A page here traced to benign automation sharing tokens with a real signal. Amara recorded it; the compile contract was unchanged.
+
+- Shift 611 — data-quality finding on the west delta feed: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Boyd recorded it; the compile contract was unchanged.
+
+- Shift 612 — dependency incident touching epsilon: A wide override here suppressed a risk-level row and was rolled back next shift. Cortes recorded it; the compile contract was unchanged.
+
+- Shift 613 — correlation study, zeta vs epsilon: A multipart-abort storm briefly doubled its volume with no genuine escalations. Devi recorded it; the compile contract was unchanged.
+
+- Shift 614 — detector tuning for `range-scan`: A region-hop burst here was the first case that exercised the wide probe boundary. Engel recorded it; the compile contract was unchanged.
+
+- Shift 615 — on-call handoff, offshore lane: A page here traced to benign automation sharing tokens with a real signal. Farouk recorded it; the compile contract was unchanged.
+
+- Shift 616 — change-review debate on iota: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ganesh recorded it; the compile contract was unchanged.
+
+- Shift 617 — post-incident follow-up for kappa: A wide override here suppressed a risk-level row and was rolled back next shift. Ivers recorded it; the compile contract was unchanged.
+
+- Shift 618 — compaction spot-check on lambda: A multipart-abort storm briefly doubled its volume with no genuine escalations. Jang recorded it; the compile contract was unchanged.
+
+- Shift 619 — ledger review after a mu escalation: A region-hop burst here was the first case that exercised the wide probe boundary. Kaur recorded it; the compile contract was unchanged.
+
+- Shift 620 — capacity review on nu (north): A page here traced to benign automation sharing tokens with a real signal. Nadia recorded it; the compile contract was unchanged.
+
+- Shift 621 — false-positive audit for `token-reuse` on xi: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ilya recorded it; the compile contract was unchanged.
+
+- Shift 622 — override-policy note on omicron: A wide override here suppressed a risk-level row and was rolled back next shift. Marta recorded it; the compile contract was unchanged.
+
+- Shift 623 — data-quality finding on the west pi feed: A multipart-abort storm briefly doubled its volume with no genuine escalations. Priya recorded it; the compile contract was unchanged.
+
+- Shift 624 — dependency incident touching rho: A region-hop burst here was the first case that exercised the wide probe boundary. Rao recorded it; the compile contract was unchanged.
+
+- Shift 625 — correlation study, sigma vs rho: A page here traced to benign automation sharing tokens with a real signal. Chen recorded it; the compile contract was unchanged.
+
+- Shift 626 — detector tuning for `lifecycle-skip`: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Okafor recorded it; the compile contract was unchanged.
+
+- Shift 627 — on-call handoff, offshore lane: A wide override here suppressed a risk-level row and was rolled back next shift. Silva recorded it; the compile contract was unchanged.
+
+- Shift 628 — change-review debate on phi: A multipart-abort storm briefly doubled its volume with no genuine escalations. Haddad recorded it; the compile contract was unchanged.
+
+- Shift 629 — post-incident follow-up for chi: A region-hop burst here was the first case that exercised the wide probe boundary. Lindqvist recorded it; the compile contract was unchanged.
+
+- Shift 630 — compaction spot-check on psi: A page here traced to benign automation sharing tokens with a real signal. Amara recorded it; the compile contract was unchanged.
+
+- Shift 631 — ledger review after a omega escalation: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Boyd recorded it; the compile contract was unchanged.
+
+- Shift 632 — capacity review on alpha (north): A wide override here suppressed a risk-level row and was rolled back next shift. Cortes recorded it; the compile contract was unchanged.
+
+- Shift 633 — false-positive audit for `unauthenticated-read` on beta: A multipart-abort storm briefly doubled its volume with no genuine escalations. Devi recorded it; the compile contract was unchanged.
+
+- Shift 634 — override-policy note on gamma: A region-hop burst here was the first case that exercised the wide probe boundary. Engel recorded it; the compile contract was unchanged.
+
+- Shift 635 — data-quality finding on the west delta feed: A page here traced to benign automation sharing tokens with a real signal. Farouk recorded it; the compile contract was unchanged.
+
+- Shift 636 — dependency incident touching epsilon: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ganesh recorded it; the compile contract was unchanged.
+
+- Shift 637 — correlation study, zeta vs epsilon: A wide override here suppressed a risk-level row and was rolled back next shift. Ivers recorded it; the compile contract was unchanged.
+
+- Shift 638 — detector tuning for `list-enumeration`: A multipart-abort storm briefly doubled its volume with no genuine escalations. Jang recorded it; the compile contract was unchanged.
+
+- Shift 639 — on-call handoff, offshore lane: A region-hop burst here was the first case that exercised the wide probe boundary. Kaur recorded it; the compile contract was unchanged.
+
+- Shift 640 — change-review debate on iota: A page here traced to benign automation sharing tokens with a real signal. Nadia recorded it; the compile contract was unchanged.
+
+- Shift 641 — post-incident follow-up for kappa: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ilya recorded it; the compile contract was unchanged.
+
+- Shift 642 — compaction spot-check on lambda: A wide override here suppressed a risk-level row and was rolled back next shift. Marta recorded it; the compile contract was unchanged.
+
+- Shift 643 — ledger review after a mu escalation: A multipart-abort storm briefly doubled its volume with no genuine escalations. Priya recorded it; the compile contract was unchanged.
+
+- Shift 644 — capacity review on nu (north): A region-hop burst here was the first case that exercised the wide probe boundary. Rao recorded it; the compile contract was unchanged.
+
+- Shift 645 — false-positive audit for `anon-head` on xi: A page here traced to benign automation sharing tokens with a real signal. Chen recorded it; the compile contract was unchanged.
+
+- Shift 646 — override-policy note on omicron: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Okafor recorded it; the compile contract was unchanged.
+
+- Shift 647 — data-quality finding on the west pi feed: A wide override here suppressed a risk-level row and was rolled back next shift. Silva recorded it; the compile contract was unchanged.
+
+- Shift 648 — dependency incident touching rho: A multipart-abort storm briefly doubled its volume with no genuine escalations. Haddad recorded it; the compile contract was unchanged.
+
+- Shift 649 — correlation study, sigma vs rho: A region-hop burst here was the first case that exercised the wide probe boundary. Lindqvist recorded it; the compile contract was unchanged.
+
+- Shift 650 — detector tuning for `batch-replay`: A page here traced to benign automation sharing tokens with a real signal. Amara recorded it; the compile contract was unchanged.
+
+- Shift 651 — on-call handoff, offshore lane: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Boyd recorded it; the compile contract was unchanged.
+
+- Shift 652 — change-review debate on phi: A wide override here suppressed a risk-level row and was rolled back next shift. Cortes recorded it; the compile contract was unchanged.
+
+- Shift 653 — post-incident follow-up for chi: A multipart-abort storm briefly doubled its volume with no genuine escalations. Devi recorded it; the compile contract was unchanged.
+
+- Shift 654 — compaction spot-check on psi: A region-hop burst here was the first case that exercised the wide probe boundary. Engel recorded it; the compile contract was unchanged.
+
+- Shift 655 — ledger review after a omega escalation: A page here traced to benign automation sharing tokens with a real signal. Farouk recorded it; the compile contract was unchanged.
+
+- Shift 656 — capacity review on alpha (north): A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ganesh recorded it; the compile contract was unchanged.
+
+- Shift 657 — false-positive audit for `acl-widen` on beta: A wide override here suppressed a risk-level row and was rolled back next shift. Ivers recorded it; the compile contract was unchanged.
+
+- Shift 658 — override-policy note on gamma: A multipart-abort storm briefly doubled its volume with no genuine escalations. Jang recorded it; the compile contract was unchanged.
+
+- Shift 659 — data-quality finding on the west delta feed: A region-hop burst here was the first case that exercised the wide probe boundary. Kaur recorded it; the compile contract was unchanged.
+
+- Shift 660 — dependency incident touching epsilon: A page here traced to benign automation sharing tokens with a real signal. Nadia recorded it; the compile contract was unchanged.
+
+- Shift 661 — correlation study, zeta vs epsilon: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ilya recorded it; the compile contract was unchanged.
+
+- Shift 662 — detector tuning for `range-scan`: A wide override here suppressed a risk-level row and was rolled back next shift. Marta recorded it; the compile contract was unchanged.
+
+- Shift 663 — on-call handoff, offshore lane: A multipart-abort storm briefly doubled its volume with no genuine escalations. Priya recorded it; the compile contract was unchanged.
+
+- Shift 664 — change-review debate on iota: A region-hop burst here was the first case that exercised the wide probe boundary. Rao recorded it; the compile contract was unchanged.
+
+- Shift 665 — post-incident follow-up for kappa: A page here traced to benign automation sharing tokens with a real signal. Chen recorded it; the compile contract was unchanged.
+
+- Shift 666 — compaction spot-check on lambda: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Okafor recorded it; the compile contract was unchanged.
+
+- Shift 667 — ledger review after a mu escalation: A wide override here suppressed a risk-level row and was rolled back next shift. Silva recorded it; the compile contract was unchanged.
+
+- Shift 668 — capacity review on nu (north): A multipart-abort storm briefly doubled its volume with no genuine escalations. Haddad recorded it; the compile contract was unchanged.
+
+- Shift 669 — false-positive audit for `token-reuse` on xi: A region-hop burst here was the first case that exercised the wide probe boundary. Lindqvist recorded it; the compile contract was unchanged.
+
+- Shift 670 — override-policy note on omicron: A page here traced to benign automation sharing tokens with a real signal. Amara recorded it; the compile contract was unchanged.
+
+- Shift 671 — data-quality finding on the west pi feed: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Boyd recorded it; the compile contract was unchanged.
+
+- Shift 672 — dependency incident touching rho: A wide override here suppressed a risk-level row and was rolled back next shift. Cortes recorded it; the compile contract was unchanged.
+
+- Shift 673 — correlation study, sigma vs rho: A multipart-abort storm briefly doubled its volume with no genuine escalations. Devi recorded it; the compile contract was unchanged.
+
+- Shift 674 — detector tuning for `lifecycle-skip`: A region-hop burst here was the first case that exercised the wide probe boundary. Engel recorded it; the compile contract was unchanged.
+
+- Shift 675 — on-call handoff, offshore lane: A page here traced to benign automation sharing tokens with a real signal. Farouk recorded it; the compile contract was unchanged.
+
+- Shift 676 — change-review debate on phi: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ganesh recorded it; the compile contract was unchanged.
+
+- Shift 677 — post-incident follow-up for chi: A wide override here suppressed a risk-level row and was rolled back next shift. Ivers recorded it; the compile contract was unchanged.
+
+- Shift 678 — compaction spot-check on psi: A multipart-abort storm briefly doubled its volume with no genuine escalations. Jang recorded it; the compile contract was unchanged.
+
+- Shift 679 — ledger review after a omega escalation: A region-hop burst here was the first case that exercised the wide probe boundary. Kaur recorded it; the compile contract was unchanged.
+
+- Shift 680 — capacity review on alpha (north): A page here traced to benign automation sharing tokens with a real signal. Nadia recorded it; the compile contract was unchanged.
+
+- Shift 681 — false-positive audit for `unauthenticated-read` on beta: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ilya recorded it; the compile contract was unchanged.
+
+- Shift 682 — override-policy note on gamma: A wide override here suppressed a risk-level row and was rolled back next shift. Marta recorded it; the compile contract was unchanged.
+
+- Shift 683 — data-quality finding on the west delta feed: A multipart-abort storm briefly doubled its volume with no genuine escalations. Priya recorded it; the compile contract was unchanged.
+
+- Shift 684 — dependency incident touching epsilon: A region-hop burst here was the first case that exercised the wide probe boundary. Rao recorded it; the compile contract was unchanged.
+
+- Shift 685 — correlation study, zeta vs epsilon: A page here traced to benign automation sharing tokens with a real signal. Chen recorded it; the compile contract was unchanged.
+
+- Shift 686 — detector tuning for `list-enumeration`: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Okafor recorded it; the compile contract was unchanged.
+
+- Shift 687 — on-call handoff, offshore lane: A wide override here suppressed a risk-level row and was rolled back next shift. Silva recorded it; the compile contract was unchanged.
+
+- Shift 688 — change-review debate on iota: A multipart-abort storm briefly doubled its volume with no genuine escalations. Haddad recorded it; the compile contract was unchanged.
+
+- Shift 689 — post-incident follow-up for kappa: A region-hop burst here was the first case that exercised the wide probe boundary. Lindqvist recorded it; the compile contract was unchanged.
+
+- Shift 690 — compaction spot-check on lambda: A page here traced to benign automation sharing tokens with a real signal. Amara recorded it; the compile contract was unchanged.
+
+- Shift 691 — ledger review after a mu escalation: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Boyd recorded it; the compile contract was unchanged.
+
+- Shift 692 — capacity review on nu (north): A wide override here suppressed a risk-level row and was rolled back next shift. Cortes recorded it; the compile contract was unchanged.
+
+- Shift 693 — false-positive audit for `anon-head` on xi: A multipart-abort storm briefly doubled its volume with no genuine escalations. Devi recorded it; the compile contract was unchanged.
+
+- Shift 694 — override-policy note on omicron: A region-hop burst here was the first case that exercised the wide probe boundary. Engel recorded it; the compile contract was unchanged.
+
+- Shift 695 — data-quality finding on the west pi feed: A page here traced to benign automation sharing tokens with a real signal. Farouk recorded it; the compile contract was unchanged.
+
+- Shift 696 — dependency incident touching rho: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ganesh recorded it; the compile contract was unchanged.
+
+- Shift 697 — correlation study, sigma vs rho: A wide override here suppressed a risk-level row and was rolled back next shift. Ivers recorded it; the compile contract was unchanged.
+
+- Shift 698 — detector tuning for `batch-replay`: A multipart-abort storm briefly doubled its volume with no genuine escalations. Jang recorded it; the compile contract was unchanged.
+
+- Shift 699 — on-call handoff, offshore lane: A region-hop burst here was the first case that exercised the wide probe boundary. Kaur recorded it; the compile contract was unchanged.
+
+- Shift 700 — change-review debate on phi: A page here traced to benign automation sharing tokens with a real signal. Nadia recorded it; the compile contract was unchanged.
+
+- Shift 701 — post-incident follow-up for chi: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ilya recorded it; the compile contract was unchanged.
+
+- Shift 702 — compaction spot-check on psi: A wide override here suppressed a risk-level row and was rolled back next shift. Marta recorded it; the compile contract was unchanged.
+
+- Shift 703 — ledger review after a omega escalation: A multipart-abort storm briefly doubled its volume with no genuine escalations. Priya recorded it; the compile contract was unchanged.
+
+- Shift 704 — capacity review on alpha (north): A region-hop burst here was the first case that exercised the wide probe boundary. Rao recorded it; the compile contract was unchanged.
+
+- Shift 705 — false-positive audit for `acl-widen` on beta: A page here traced to benign automation sharing tokens with a real signal. Chen recorded it; the compile contract was unchanged.
+
+- Shift 706 — override-policy note on gamma: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Okafor recorded it; the compile contract was unchanged.
+
+- Shift 707 — data-quality finding on the west delta feed: A wide override here suppressed a risk-level row and was rolled back next shift. Silva recorded it; the compile contract was unchanged.
+
+- Shift 708 — dependency incident touching epsilon: A multipart-abort storm briefly doubled its volume with no genuine escalations. Haddad recorded it; the compile contract was unchanged.
+
+- Shift 709 — correlation study, zeta vs epsilon: A region-hop burst here was the first case that exercised the wide probe boundary. Lindqvist recorded it; the compile contract was unchanged.
+
+- Shift 710 — detector tuning for `range-scan`: A page here traced to benign automation sharing tokens with a real signal. Amara recorded it; the compile contract was unchanged.
+
+- Shift 711 — on-call handoff, offshore lane: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Boyd recorded it; the compile contract was unchanged.
+
+- Shift 712 — change-review debate on iota: A wide override here suppressed a risk-level row and was rolled back next shift. Cortes recorded it; the compile contract was unchanged.
+
+- Shift 713 — post-incident follow-up for kappa: A multipart-abort storm briefly doubled its volume with no genuine escalations. Devi recorded it; the compile contract was unchanged.
+
+- Shift 714 — compaction spot-check on lambda: A region-hop burst here was the first case that exercised the wide probe boundary. Engel recorded it; the compile contract was unchanged.
+
+- Shift 715 — ledger review after a mu escalation: A page here traced to benign automation sharing tokens with a real signal. Farouk recorded it; the compile contract was unchanged.
+
+- Shift 716 — capacity review on nu (north): A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ganesh recorded it; the compile contract was unchanged.
+
+- Shift 717 — false-positive audit for `token-reuse` on xi: A wide override here suppressed a risk-level row and was rolled back next shift. Ivers recorded it; the compile contract was unchanged.
+
+- Shift 718 — override-policy note on omicron: A multipart-abort storm briefly doubled its volume with no genuine escalations. Jang recorded it; the compile contract was unchanged.
+
+- Shift 719 — data-quality finding on the west pi feed: A region-hop burst here was the first case that exercised the wide probe boundary. Kaur recorded it; the compile contract was unchanged.
+
+- Shift 720 — dependency incident touching rho: A page here traced to benign automation sharing tokens with a real signal. Nadia recorded it; the compile contract was unchanged.
+
+- Shift 721 — correlation study, sigma vs rho: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ilya recorded it; the compile contract was unchanged.
+
+- Shift 722 — detector tuning for `lifecycle-skip`: A wide override here suppressed a risk-level row and was rolled back next shift. Marta recorded it; the compile contract was unchanged.
+
+- Shift 723 — on-call handoff, offshore lane: A multipart-abort storm briefly doubled its volume with no genuine escalations. Priya recorded it; the compile contract was unchanged.
+
+- Shift 724 — change-review debate on phi: A region-hop burst here was the first case that exercised the wide probe boundary. Rao recorded it; the compile contract was unchanged.
+
+- Shift 725 — post-incident follow-up for chi: A page here traced to benign automation sharing tokens with a real signal. Chen recorded it; the compile contract was unchanged.
+
+- Shift 726 — compaction spot-check on psi: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Okafor recorded it; the compile contract was unchanged.
+
+- Shift 727 — ledger review after a omega escalation: A wide override here suppressed a risk-level row and was rolled back next shift. Silva recorded it; the compile contract was unchanged.
+
+- Shift 728 — capacity review on alpha (north): A multipart-abort storm briefly doubled its volume with no genuine escalations. Haddad recorded it; the compile contract was unchanged.
+
+- Shift 729 — false-positive audit for `unauthenticated-read` on beta: A region-hop burst here was the first case that exercised the wide probe boundary. Lindqvist recorded it; the compile contract was unchanged.
+
+- Shift 730 — override-policy note on gamma: A page here traced to benign automation sharing tokens with a real signal. Amara recorded it; the compile contract was unchanged.
+
+- Shift 731 — data-quality finding on the west delta feed: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Boyd recorded it; the compile contract was unchanged.
+
+- Shift 732 — dependency incident touching epsilon: A wide override here suppressed a risk-level row and was rolled back next shift. Cortes recorded it; the compile contract was unchanged.
+
+- Shift 733 — correlation study, zeta vs epsilon: A multipart-abort storm briefly doubled its volume with no genuine escalations. Devi recorded it; the compile contract was unchanged.
+
+- Shift 734 — detector tuning for `list-enumeration`: A region-hop burst here was the first case that exercised the wide probe boundary. Engel recorded it; the compile contract was unchanged.
+
+- Shift 735 — on-call handoff, offshore lane: A page here traced to benign automation sharing tokens with a real signal. Farouk recorded it; the compile contract was unchanged.
+
+- Shift 736 — change-review debate on iota: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ganesh recorded it; the compile contract was unchanged.
+
+- Shift 737 — post-incident follow-up for kappa: A wide override here suppressed a risk-level row and was rolled back next shift. Ivers recorded it; the compile contract was unchanged.
+
+- Shift 738 — compaction spot-check on lambda: A multipart-abort storm briefly doubled its volume with no genuine escalations. Jang recorded it; the compile contract was unchanged.
+
+- Shift 739 — ledger review after a mu escalation: A region-hop burst here was the first case that exercised the wide probe boundary. Kaur recorded it; the compile contract was unchanged.
+
+- Shift 740 — capacity review on nu (north): A page here traced to benign automation sharing tokens with a real signal. Nadia recorded it; the compile contract was unchanged.
+
+- Shift 741 — false-positive audit for `anon-head` on xi: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ilya recorded it; the compile contract was unchanged.
+
+- Shift 742 — override-policy note on omicron: A wide override here suppressed a risk-level row and was rolled back next shift. Marta recorded it; the compile contract was unchanged.
+
+- Shift 743 — data-quality finding on the west pi feed: A multipart-abort storm briefly doubled its volume with no genuine escalations. Priya recorded it; the compile contract was unchanged.
+
+- Shift 744 — dependency incident touching rho: A region-hop burst here was the first case that exercised the wide probe boundary. Rao recorded it; the compile contract was unchanged.
+
+- Shift 745 — correlation study, sigma vs rho: A page here traced to benign automation sharing tokens with a real signal. Chen recorded it; the compile contract was unchanged.
+
+- Shift 746 — detector tuning for `batch-replay`: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Okafor recorded it; the compile contract was unchanged.
+
+- Shift 747 — on-call handoff, offshore lane: A wide override here suppressed a risk-level row and was rolled back next shift. Silva recorded it; the compile contract was unchanged.
+
+- Shift 748 — change-review debate on phi: A multipart-abort storm briefly doubled its volume with no genuine escalations. Haddad recorded it; the compile contract was unchanged.
+
+- Shift 749 — post-incident follow-up for chi: A region-hop burst here was the first case that exercised the wide probe boundary. Lindqvist recorded it; the compile contract was unchanged.
+
+- Shift 750 — compaction spot-check on psi: A page here traced to benign automation sharing tokens with a real signal. Amara recorded it; the compile contract was unchanged.
+
+- Shift 751 — ledger review after a omega escalation: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Boyd recorded it; the compile contract was unchanged.
+
+- Shift 752 — capacity review on alpha (north): A wide override here suppressed a risk-level row and was rolled back next shift. Cortes recorded it; the compile contract was unchanged.
+
+- Shift 753 — false-positive audit for `acl-widen` on beta: A multipart-abort storm briefly doubled its volume with no genuine escalations. Devi recorded it; the compile contract was unchanged.
+
+- Shift 754 — override-policy note on gamma: A region-hop burst here was the first case that exercised the wide probe boundary. Engel recorded it; the compile contract was unchanged.
+
+- Shift 755 — data-quality finding on the west delta feed: A page here traced to benign automation sharing tokens with a real signal. Farouk recorded it; the compile contract was unchanged.
+
+- Shift 756 — dependency incident touching epsilon: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ganesh recorded it; the compile contract was unchanged.
+
+- Shift 757 — correlation study, zeta vs epsilon: A wide override here suppressed a risk-level row and was rolled back next shift. Ivers recorded it; the compile contract was unchanged.
+
+- Shift 758 — detector tuning for `range-scan`: A multipart-abort storm briefly doubled its volume with no genuine escalations. Jang recorded it; the compile contract was unchanged.
+
+- Shift 759 — on-call handoff, offshore lane: A region-hop burst here was the first case that exercised the wide probe boundary. Kaur recorded it; the compile contract was unchanged.
+
+- Shift 760 — change-review debate on iota: A page here traced to benign automation sharing tokens with a real signal. Nadia recorded it; the compile contract was unchanged.
+
+- Shift 761 — post-incident follow-up for kappa: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ilya recorded it; the compile contract was unchanged.
+
+- Shift 762 — compaction spot-check on lambda: A wide override here suppressed a risk-level row and was rolled back next shift. Marta recorded it; the compile contract was unchanged.
+
+- Shift 763 — ledger review after a mu escalation: A multipart-abort storm briefly doubled its volume with no genuine escalations. Priya recorded it; the compile contract was unchanged.
+
+- Shift 764 — capacity review on nu (north): A region-hop burst here was the first case that exercised the wide probe boundary. Rao recorded it; the compile contract was unchanged.
+
+- Shift 765 — false-positive audit for `token-reuse` on xi: A page here traced to benign automation sharing tokens with a real signal. Chen recorded it; the compile contract was unchanged.
+
+- Shift 766 — override-policy note on omicron: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Okafor recorded it; the compile contract was unchanged.
+
+- Shift 767 — data-quality finding on the west pi feed: A wide override here suppressed a risk-level row and was rolled back next shift. Silva recorded it; the compile contract was unchanged.
+
+- Shift 768 — dependency incident touching rho: A multipart-abort storm briefly doubled its volume with no genuine escalations. Haddad recorded it; the compile contract was unchanged.
+
+- Shift 769 — correlation study, sigma vs rho: A region-hop burst here was the first case that exercised the wide probe boundary. Lindqvist recorded it; the compile contract was unchanged.
+
+- Shift 770 — detector tuning for `lifecycle-skip`: A page here traced to benign automation sharing tokens with a real signal. Amara recorded it; the compile contract was unchanged.
+
+- Shift 771 — on-call handoff, offshore lane: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Boyd recorded it; the compile contract was unchanged.
+
+- Shift 772 — change-review debate on phi: A wide override here suppressed a risk-level row and was rolled back next shift. Cortes recorded it; the compile contract was unchanged.
+
+- Shift 773 — post-incident follow-up for chi: A multipart-abort storm briefly doubled its volume with no genuine escalations. Devi recorded it; the compile contract was unchanged.
+
+- Shift 774 — compaction spot-check on psi: A region-hop burst here was the first case that exercised the wide probe boundary. Engel recorded it; the compile contract was unchanged.
+
+- Shift 775 — ledger review after a omega escalation: A page here traced to benign automation sharing tokens with a real signal. Farouk recorded it; the compile contract was unchanged.
+
+- Shift 776 — capacity review on alpha (north): A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ganesh recorded it; the compile contract was unchanged.
+
+- Shift 777 — false-positive audit for `unauthenticated-read` on beta: A wide override here suppressed a risk-level row and was rolled back next shift. Ivers recorded it; the compile contract was unchanged.
+
+- Shift 778 — override-policy note on gamma: A multipart-abort storm briefly doubled its volume with no genuine escalations. Jang recorded it; the compile contract was unchanged.
+
+- Shift 779 — data-quality finding on the west delta feed: A region-hop burst here was the first case that exercised the wide probe boundary. Kaur recorded it; the compile contract was unchanged.
+
+- Shift 780 — dependency incident touching epsilon: A page here traced to benign automation sharing tokens with a real signal. Nadia recorded it; the compile contract was unchanged.
+
+- Shift 781 — correlation study, zeta vs epsilon: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ilya recorded it; the compile contract was unchanged.
+
+- Shift 782 — detector tuning for `list-enumeration`: A wide override here suppressed a risk-level row and was rolled back next shift. Marta recorded it; the compile contract was unchanged.
+
+- Shift 783 — on-call handoff, offshore lane: A multipart-abort storm briefly doubled its volume with no genuine escalations. Priya recorded it; the compile contract was unchanged.
+
+- Shift 784 — change-review debate on iota: A region-hop burst here was the first case that exercised the wide probe boundary. Rao recorded it; the compile contract was unchanged.
+
+- Shift 785 — post-incident follow-up for kappa: A page here traced to benign automation sharing tokens with a real signal. Chen recorded it; the compile contract was unchanged.
+
+- Shift 786 — compaction spot-check on lambda: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Okafor recorded it; the compile contract was unchanged.
+
+- Shift 787 — ledger review after a mu escalation: A wide override here suppressed a risk-level row and was rolled back next shift. Silva recorded it; the compile contract was unchanged.
+
+- Shift 788 — capacity review on nu (north): A multipart-abort storm briefly doubled its volume with no genuine escalations. Haddad recorded it; the compile contract was unchanged.
+
+- Shift 789 — false-positive audit for `anon-head` on xi: A region-hop burst here was the first case that exercised the wide probe boundary. Lindqvist recorded it; the compile contract was unchanged.
+
+- Shift 790 — override-policy note on omicron: A page here traced to benign automation sharing tokens with a real signal. Amara recorded it; the compile contract was unchanged.
+
+- Shift 791 — data-quality finding on the west pi feed: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Boyd recorded it; the compile contract was unchanged.
+
+- Shift 792 — dependency incident touching rho: A wide override here suppressed a risk-level row and was rolled back next shift. Cortes recorded it; the compile contract was unchanged.
+
+- Shift 793 — correlation study, sigma vs rho: A multipart-abort storm briefly doubled its volume with no genuine escalations. Devi recorded it; the compile contract was unchanged.
+
+- Shift 794 — detector tuning for `batch-replay`: A region-hop burst here was the first case that exercised the wide probe boundary. Engel recorded it; the compile contract was unchanged.
+
+- Shift 795 — on-call handoff, offshore lane: A page here traced to benign automation sharing tokens with a real signal. Farouk recorded it; the compile contract was unchanged.
+
+- Shift 796 — change-review debate on phi: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ganesh recorded it; the compile contract was unchanged.
+
+- Shift 797 — post-incident follow-up for chi: A wide override here suppressed a risk-level row and was rolled back next shift. Ivers recorded it; the compile contract was unchanged.
+
+- Shift 798 — compaction spot-check on psi: A multipart-abort storm briefly doubled its volume with no genuine escalations. Jang recorded it; the compile contract was unchanged.
+
+- Shift 799 — ledger review after a omega escalation: A region-hop burst here was the first case that exercised the wide probe boundary. Kaur recorded it; the compile contract was unchanged.
+
+- Shift 800 — capacity review on alpha (north): A page here traced to benign automation sharing tokens with a real signal. Nadia recorded it; the compile contract was unchanged.
+
+- Shift 801 — false-positive audit for `acl-widen` on beta: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ilya recorded it; the compile contract was unchanged.
+
+- Shift 802 — override-policy note on gamma: A wide override here suppressed a risk-level row and was rolled back next shift. Marta recorded it; the compile contract was unchanged.
+
+- Shift 803 — data-quality finding on the west delta feed: A multipart-abort storm briefly doubled its volume with no genuine escalations. Priya recorded it; the compile contract was unchanged.
+
+- Shift 804 — dependency incident touching epsilon: A region-hop burst here was the first case that exercised the wide probe boundary. Rao recorded it; the compile contract was unchanged.
+
+- Shift 805 — correlation study, zeta vs epsilon: A page here traced to benign automation sharing tokens with a real signal. Chen recorded it; the compile contract was unchanged.
+
+- Shift 806 — detector tuning for `range-scan`: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Okafor recorded it; the compile contract was unchanged.
+
+- Shift 807 — on-call handoff, offshore lane: A wide override here suppressed a risk-level row and was rolled back next shift. Silva recorded it; the compile contract was unchanged.
+
+- Shift 808 — change-review debate on iota: A multipart-abort storm briefly doubled its volume with no genuine escalations. Haddad recorded it; the compile contract was unchanged.
+
+- Shift 809 — post-incident follow-up for kappa: A region-hop burst here was the first case that exercised the wide probe boundary. Lindqvist recorded it; the compile contract was unchanged.
+
+- Shift 810 — compaction spot-check on lambda: A page here traced to benign automation sharing tokens with a real signal. Amara recorded it; the compile contract was unchanged.
+
+- Shift 811 — ledger review after a mu escalation: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Boyd recorded it; the compile contract was unchanged.
+
+- Shift 812 — capacity review on nu (north): A wide override here suppressed a risk-level row and was rolled back next shift. Cortes recorded it; the compile contract was unchanged.
+
+- Shift 813 — false-positive audit for `token-reuse` on xi: A multipart-abort storm briefly doubled its volume with no genuine escalations. Devi recorded it; the compile contract was unchanged.
+
+- Shift 814 — override-policy note on omicron: A region-hop burst here was the first case that exercised the wide probe boundary. Engel recorded it; the compile contract was unchanged.
+
+- Shift 815 — data-quality finding on the west pi feed: A page here traced to benign automation sharing tokens with a real signal. Farouk recorded it; the compile contract was unchanged.
+
+- Shift 816 — dependency incident touching rho: A stale-cache dashboard lag was misattributed to it before being ruled downstream. Ganesh recorded it; the compile contract was unchanged.
+
+- Shift 817 — correlation study, sigma vs rho: A wide override here suppressed a risk-level row and was rolled back next shift. Ivers recorded it; the compile contract was unchanged.
+
+- Shift 818 — detector tuning for `lifecycle-skip`: A multipart-abort storm briefly doubled its volume with no genuine escalations. Jang recorded it; the compile contract was unchanged.
+
+- Shift 819 — on-call handoff, offshore lane: A region-hop burst here was the first case that exercised the wide probe boundary. Kaur recorded it; the compile contract was unchanged.
+
+
+## Post-mortems
+
+
+### Post-mortem 1 — alpha/cross-bucket-read drift in the override compaction
+
+A cluster of `cross-bucket-read` signals on alpha behaved unexpectedly at the override compaction. Nadia reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A page here traced to benign automation sharing tokens with a real signal. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for the override compaction; this note is context.
+
+### Post-mortem 2 — beta/unauthenticated-read drift in the near probe
+
+A cluster of `unauthenticated-read` signals on beta behaved unexpectedly at the near probe. Ilya reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A stale-cache dashboard lag was misattributed to it before being ruled downstream. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for the near probe; this note is context.
+
+### Post-mortem 3 — gamma/batch-replay drift in the wide probe
+
+A cluster of `batch-replay` signals on gamma behaved unexpectedly at the wide probe. Marta reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A wide override here suppressed a risk-level row and was rolled back next shift. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for the wide probe; this note is context.
+
+### Post-mortem 4 — delta/authenticated-read drift in chain correlation
+
+A cluster of `authenticated-read` signals on delta behaved unexpectedly at chain correlation. Priya reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A multipart-abort storm briefly doubled its volume with no genuine escalations. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for chain correlation; this note is context.
+
+### Post-mortem 5 — epsilon/policy-drift drift in directed reach
+
+A cluster of `policy-drift` signals on epsilon behaved unexpectedly at directed reach. Rao reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A region-hop burst here was the first case that exercised the wide probe boundary. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for directed reach; this note is context.
+
+### Post-mortem 6 — zeta/token-reuse drift in chain influence
+
+A cluster of `token-reuse` signals on zeta behaved unexpectedly at chain influence. Chen reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A page here traced to benign automation sharing tokens with a real signal. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for chain influence; this note is context.
+
+### Post-mortem 7 — eta/list-enumeration drift in the escalation ledger
+
+A cluster of `list-enumeration` signals on eta behaved unexpectedly at the escalation ledger. Okafor reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A stale-cache dashboard lag was misattributed to it before being ruled downstream. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for the escalation ledger; this note is context.
+
+### Post-mortem 8 — theta/cold-object-fetch drift in the queue ordering
+
+A cluster of `cold-object-fetch` signals on theta behaved unexpectedly at the queue ordering. Silva reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A wide override here suppressed a risk-level row and was rolled back next shift. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for the queue ordering; this note is context.
+
+### Post-mortem 9 — iota/multipart-abort drift in the per-bucket cap
+
+A cluster of `multipart-abort` signals on iota behaved unexpectedly at the per-bucket cap. Haddad reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A multipart-abort storm briefly doubled its volume with no genuine escalations. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for the per-bucket cap; this note is context.
+
+### Post-mortem 10 — kappa/acl-widen drift in normalization
+
+A cluster of `acl-widen` signals on kappa behaved unexpectedly at normalization. Lindqvist reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A region-hop burst here was the first case that exercised the wide probe boundary. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for normalization; this note is context.
+
+### Post-mortem 11 — lambda/lifecycle-skip drift in the override compaction
+
+A cluster of `lifecycle-skip` signals on lambda behaved unexpectedly at the override compaction. Amara reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A page here traced to benign automation sharing tokens with a real signal. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for the override compaction; this note is context.
+
+### Post-mortem 12 — mu/region-hop drift in the near probe
+
+A cluster of `region-hop` signals on mu behaved unexpectedly at the near probe. Boyd reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A stale-cache dashboard lag was misattributed to it before being ruled downstream. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for the near probe; this note is context.
+
+### Post-mortem 13 — nu/signed-url-replay drift in the wide probe
+
+A cluster of `signed-url-replay` signals on nu behaved unexpectedly at the wide probe. Cortes reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A wide override here suppressed a risk-level row and was rolled back next shift. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for the wide probe; this note is context.
+
+### Post-mortem 14 — xi/anon-head drift in chain correlation
+
+A cluster of `anon-head` signals on xi behaved unexpectedly at chain correlation. Devi reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A multipart-abort storm briefly doubled its volume with no genuine escalations. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for chain correlation; this note is context.
+
+### Post-mortem 15 — omicron/range-scan drift in directed reach
+
+A cluster of `range-scan` signals on omicron behaved unexpectedly at directed reach. Engel reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A region-hop burst here was the first case that exercised the wide probe boundary. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for directed reach; this note is context.
+
+### Post-mortem 16 — pi/versioned-restore drift in chain influence
+
+A cluster of `versioned-restore` signals on pi behaved unexpectedly at chain influence. Farouk reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A page here traced to benign automation sharing tokens with a real signal. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for chain influence; this note is context.
+
+### Post-mortem 17 — rho/cross-bucket-read drift in the escalation ledger
+
+A cluster of `cross-bucket-read` signals on rho behaved unexpectedly at the escalation ledger. Ganesh reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A stale-cache dashboard lag was misattributed to it before being ruled downstream. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for the escalation ledger; this note is context.
+
+### Post-mortem 18 — sigma/unauthenticated-read drift in the queue ordering
+
+A cluster of `unauthenticated-read` signals on sigma behaved unexpectedly at the queue ordering. Ivers reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A wide override here suppressed a risk-level row and was rolled back next shift. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for the queue ordering; this note is context.
+
+### Post-mortem 19 — tau/batch-replay drift in the per-bucket cap
+
+A cluster of `batch-replay` signals on tau behaved unexpectedly at the per-bucket cap. Jang reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A multipart-abort storm briefly doubled its volume with no genuine escalations. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for the per-bucket cap; this note is context.
+
+### Post-mortem 20 — upsilon/authenticated-read drift in normalization
+
+A cluster of `authenticated-read` signals on upsilon behaved unexpectedly at normalization. Kaur reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A region-hop burst here was the first case that exercised the wide probe boundary. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for normalization; this note is context.
+
+### Post-mortem 21 — phi/policy-drift drift in the override compaction
+
+A cluster of `policy-drift` signals on phi behaved unexpectedly at the override compaction. Nadia reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A page here traced to benign automation sharing tokens with a real signal. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for the override compaction; this note is context.
+
+### Post-mortem 22 — chi/token-reuse drift in the near probe
+
+A cluster of `token-reuse` signals on chi behaved unexpectedly at the near probe. Ilya reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A stale-cache dashboard lag was misattributed to it before being ruled downstream. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for the near probe; this note is context.
+
+### Post-mortem 23 — psi/list-enumeration drift in the wide probe
+
+A cluster of `list-enumeration` signals on psi behaved unexpectedly at the wide probe. Marta reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A wide override here suppressed a risk-level row and was rolled back next shift. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for the wide probe; this note is context.
+
+### Post-mortem 24 — omega/cold-object-fetch drift in chain correlation
+
+A cluster of `cold-object-fetch` signals on omega behaved unexpectedly at chain correlation. Priya reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A multipart-abort storm briefly doubled its volume with no genuine escalations. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for chain correlation; this note is context.
+
+### Post-mortem 25 — alpha/multipart-abort drift in directed reach
+
+A cluster of `multipart-abort` signals on alpha behaved unexpectedly at directed reach. Rao reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A region-hop burst here was the first case that exercised the wide probe boundary. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for directed reach; this note is context.
+
+### Post-mortem 26 — beta/acl-widen drift in chain influence
+
+A cluster of `acl-widen` signals on beta behaved unexpectedly at chain influence. Chen reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A page here traced to benign automation sharing tokens with a real signal. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for chain influence; this note is context.
+
+### Post-mortem 27 — gamma/lifecycle-skip drift in the escalation ledger
+
+A cluster of `lifecycle-skip` signals on gamma behaved unexpectedly at the escalation ledger. Okafor reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A stale-cache dashboard lag was misattributed to it before being ruled downstream. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for the escalation ledger; this note is context.
+
+### Post-mortem 28 — delta/region-hop drift in the queue ordering
+
+A cluster of `region-hop` signals on delta behaved unexpectedly at the queue ordering. Silva reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A wide override here suppressed a risk-level row and was rolled back next shift. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for the queue ordering; this note is context.
+
+### Post-mortem 29 — epsilon/signed-url-replay drift in the per-bucket cap
+
+A cluster of `signed-url-replay` signals on epsilon behaved unexpectedly at the per-bucket cap. Haddad reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A multipart-abort storm briefly doubled its volume with no genuine escalations. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for the per-bucket cap; this note is context.
+
+### Post-mortem 30 — zeta/anon-head drift in normalization
+
+A cluster of `anon-head` signals on zeta behaved unexpectedly at normalization. Lindqvist reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A region-hop burst here was the first case that exercised the wide probe boundary. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for normalization; this note is context.
+
+### Post-mortem 31 — eta/range-scan drift in the override compaction
+
+A cluster of `range-scan` signals on eta behaved unexpectedly at the override compaction. Amara reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A page here traced to benign automation sharing tokens with a real signal. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for the override compaction; this note is context.
+
+### Post-mortem 32 — theta/versioned-restore drift in the near probe
+
+A cluster of `versioned-restore` signals on theta behaved unexpectedly at the near probe. Boyd reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A stale-cache dashboard lag was misattributed to it before being ruled downstream. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for the near probe; this note is context.
+
+### Post-mortem 33 — iota/cross-bucket-read drift in the wide probe
+
+A cluster of `cross-bucket-read` signals on iota behaved unexpectedly at the wide probe. Cortes reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A wide override here suppressed a risk-level row and was rolled back next shift. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for the wide probe; this note is context.
+
+### Post-mortem 34 — kappa/unauthenticated-read drift in chain correlation
+
+A cluster of `unauthenticated-read` signals on kappa behaved unexpectedly at chain correlation. Devi reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A multipart-abort storm briefly doubled its volume with no genuine escalations. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for chain correlation; this note is context.
+
+### Post-mortem 35 — lambda/batch-replay drift in directed reach
+
+A cluster of `batch-replay` signals on lambda behaved unexpectedly at directed reach. Engel reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A region-hop burst here was the first case that exercised the wide probe boundary. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for directed reach; this note is context.
+
+### Post-mortem 36 — mu/authenticated-read drift in chain influence
+
+A cluster of `authenticated-read` signals on mu behaved unexpectedly at chain influence. Farouk reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A page here traced to benign automation sharing tokens with a real signal. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for chain influence; this note is context.
+
+### Post-mortem 37 — nu/policy-drift drift in the escalation ledger
+
+A cluster of `policy-drift` signals on nu behaved unexpectedly at the escalation ledger. Ganesh reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A stale-cache dashboard lag was misattributed to it before being ruled downstream. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for the escalation ledger; this note is context.
+
+### Post-mortem 38 — xi/token-reuse drift in the queue ordering
+
+A cluster of `token-reuse` signals on xi behaved unexpectedly at the queue ordering. Ivers reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A wide override here suppressed a risk-level row and was rolled back next shift. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for the queue ordering; this note is context.
+
+### Post-mortem 39 — omicron/list-enumeration drift in the per-bucket cap
+
+A cluster of `list-enumeration` signals on omicron behaved unexpectedly at the per-bucket cap. Jang reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A multipart-abort storm briefly doubled its volume with no genuine escalations. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for the per-bucket cap; this note is context.
+
+### Post-mortem 40 — pi/cold-object-fetch drift in normalization
+
+A cluster of `cold-object-fetch` signals on pi behaved unexpectedly at normalization. Kaur reconstructed it and found the rebuilt pipeline had diverged from the governed wording; A region-hop burst here was the first case that exercised the wide probe boundary. The recompute on an alternate stream exposed it, since copied counts matched the sample but not the unseen stream. The governing wording is the dated decision for normalization; this note is context.
