@@ -488,7 +488,7 @@ def _escalation_ledger(signals: list[dict]) -> dict:
             else max(previous_accessed_ms - signal["accessed_ms"], 0)
         )
         carry_in = max(previous_carry_out - (gap_ms // 150), 0)
-        pressure = signal["chain_risk_score"] + (-(-carry_in // 3)) + (signal["chain_influence_score"] // 6)
+        pressure = signal["chain_risk_score"] + (-(-carry_in // 3)) + (signal["chain_influence_score"] // 6) - (signal["chain_influence_rank"] - 1)
         carry_out = min(
             carry_in + signal["chain_risk_score"] - (signal["chain_size"] // 2), 58
         )
@@ -1422,7 +1422,7 @@ def test_escalation_ledger_credit_is_ceilinged(summary: dict):
     for signal in signals:
         gap = 0 if prev_ms is None else max(prev_ms - signal["accessed_ms"], 0)
         carry_in = max(prev_out - (gap // 150), 0)
-        pressure = signal["chain_risk_score"] + (carry_in // 3) + (signal["chain_influence_score"] // 6)
+        pressure = signal["chain_risk_score"] + (carry_in // 3) + (signal["chain_influence_score"] // 6) - (signal["chain_influence_rank"] - 1)
         carry_out = min(carry_in + signal["chain_risk_score"] - (signal["chain_size"] // 2), 58)
         rows.append(f"{signal['object_id']}|{pressure}|{1 if pressure >= 20 else 0}|{carry_out}")
         prev_ms, prev_out = signal["accessed_ms"], carry_out
